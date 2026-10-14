@@ -208,6 +208,9 @@ section{ padding:96px 0; }
    (left) and countdown + sign-up (right); on phones it stacks. */
 #live{ background:var(--cream); }
 #live .card{ margin-top:2.4rem; }
+/* Live card and hosts share a background, so trim the padding between them */
+#live{ padding-bottom:40px; }
+#hosts{ padding-top:40px; }
 #live .card{ max-width:960px; margin-inline:auto; box-shadow:var(--shadow); }
 .ec-grid{ display:grid; grid-template-columns:1fr; gap:1.5rem; }
 @media (min-width:860px){

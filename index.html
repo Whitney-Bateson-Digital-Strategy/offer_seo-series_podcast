@@ -233,35 +233,6 @@ section{ padding:96px 0; }
 .card .btn{ display:flex; width:100%; }
 .fineprint{ font-size:13px; line-height:1.5; color:var(--ink-soft); margin:.8rem 0 0; text-align:center; }
 
-/* ---------------- "for you if" marquee ---------------- */
-/* Sits flush under the hero. The label is pinned on the left and the
-   lines scroll past behind it. */
-.marquee-bar{
-  background:var(--teal-deep);
-  display:flex; align-items:stretch; overflow:hidden;
-  border-top:1px solid rgba(255,255,255,.08);
-}
-.mq-label{
-  position:relative; z-index:1; flex-shrink:0;
-  display:flex; align-items:center;
-  background:var(--coral); color:#fff;
-  font-size:.75rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
-  padding:0 22px 0 48px;
-  box-shadow:18px 0 22px -6px var(--teal-deep);
-}
-.marquee{ display:flex; overflow:hidden; flex:1; padding:17px 0; }
-.marquee-track{ display:flex; flex-shrink:0; animation:mq 45s linear infinite; }
-.marquee:hover .marquee-track{ animation-play-state:paused; }
-.mq-item{ white-space:nowrap; color:var(--cream); font-size:16px; padding:2px 28px; position:relative; }
-.mq-item b{ color:var(--lime); font-weight:700; }
-.mq-item::after{ content:''; position:absolute; right:-4px; top:50%; width:8px; height:8px; margin-top:-4px; border-radius:50%; background:var(--coral); }
-@keyframes mq{ from{ transform:translateX(0); } to{ transform:translateX(-100%); } }
-@media (max-width:768px){ .mq-long{ display:none; } .mq-label{ padding:0 16px 0 24px; font-size:.68rem; } .mq-item{ font-size:15px; } }
-@media (prefers-reduced-motion:reduce){
-  .marquee-track{ animation:none; flex-wrap:wrap; }
-  .marquee-track + .marquee-track{ display:none; }
-}
-
 /* ---------------- what we're covering ---------------- */
 .boxes{
   display:grid; gap:1.25rem;
@@ -290,13 +261,13 @@ section{ padding:96px 0; }
 
 /* ---------------- episodes ---------------- */
 #episodes{ background:var(--sky-wash); }
-.ep-list{ display:flex; flex-direction:column; gap:1.25rem; margin-top:2.6rem; }
+.ep-list{ display:flex; flex-direction:column; gap:1.25rem; max-width:860px; margin:2.6rem auto 0; }
 .ep{
   background:var(--paper);
   border-radius:20px;
   box-shadow:var(--shadow);
   padding:28px 32px;
-  display:grid; grid-template-columns:64px 1fr auto; gap:18px 24px; align-items:center;
+  display:grid; grid-template-columns:64px 1fr auto; gap:18px 24px; align-items:start;
 }
 .ep.featured{ border-top:5px solid var(--coral); }
 .ep-badge{
@@ -312,7 +283,7 @@ section{ padding:96px 0; }
 .ep-date{ font-size:.75rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--coral); }
 .ep h3{ font-size:24px; color:var(--teal); margin-bottom:.4rem; }
 .ep p{ font-size:16.5px; color:var(--text); line-height:1.6; }
-.ep-cta{ display:flex; flex-direction:column; gap:8px; align-items:stretch; min-width:170px; }
+.ep-cta{ display:flex; flex-direction:column; gap:8px; align-items:stretch; min-width:150px; align-self:center; }
 .ep-cta:empty{ display:none; }
 .ep-links{ display:flex; gap:16px; flex-wrap:wrap; font-size:15px; font-weight:700; margin-top:.7rem; }
 @media (max-width:820px){
@@ -342,6 +313,8 @@ section{ padding:96px 0; }
 .ep-extra-k{ font-size:.7rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--coral); }
 .ep-extra h4{ font-size:20px; color:var(--teal); margin:2px 0 3px; }
 .ep-extra p{ font-size:15px; color:var(--ink-soft); line-height:1.5; }
+/* On desktop, inner boxes line up with the episode text, not the badge */
+@media (min-width:821px){ .ep-extra, .ep-player, .ep-ph{ grid-column:2 / -1; } }
 @media (max-width:640px){ .ep-extra{ grid-template-columns:1fr; } .ep-extra-icon{ display:none; } }
 .listen-row{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:2rem; }
 .listen-row .btn{ gap:.6rem; }
@@ -472,13 +445,6 @@ footer a:hover{ color:var(--lime); }
     </div>
   </div>
 </section>
-
-<!-- ============ FOR YOU IF ============ -->
-<div id="strip" class="marquee-bar">
-  <span class="mq-label" aria-hidden="true"><span class="mq-long">This series is&nbsp;</span>for you if…</span><div class="marquee" role="img" aria-label="This series is for you if you want more of the right clients finding you, you're tired of relying on social media, you want to show up when people ask ChatGPT, you're not a tech person, or you run a local or virtual practice.">
-    <div class="marquee-track" aria-hidden="true"><span class="mq-item">You want more of the <b>right clients</b> finding you</span><span class="mq-item">You're <b>tired of relying</b> on social media</span><span class="mq-item">You want to show up when people <b>ask ChatGPT</b></span><span class="mq-item">You're <b>not a tech person</b> (and that's OK!)</span><span class="mq-item">You run a <b>local or virtual</b> practice</span></div><div class="marquee-track" aria-hidden="true"><span class="mq-item">You want more of the <b>right clients</b> finding you</span><span class="mq-item">You're <b>tired of relying</b> on social media</span><span class="mq-item">You want to show up when people <b>ask ChatGPT</b></span><span class="mq-item">You're <b>not a tech person</b> (and that's OK!)</span><span class="mq-item">You run a <b>local or virtual</b> practice</span></div>
-  </div>
-</div>
 
 <!-- ============ LIVE CALL ============ -->
 <section id="live">

@@ -188,7 +188,7 @@ section{ padding:96px 0; }
 .hero h1 em{ color:var(--lime); }
 .hero-body{ font-size:19px; line-height:1.6; color:rgba(255,255,255,.85); max-width:34em; margin:0 0 2rem; }
 .hero-body p{ margin:0 0 .8em; }
-.hero-body p:first-child{ font-size:21px; color:#fff; }
+.hero-body .hero-q{ font-family:var(--display); font-style:italic; font-size:24px; line-height:1.35; color:var(--lime); }
 .hero-ctas{ display:flex; flex-wrap:wrap; gap:12px; }
 .hero .btn-s{ background:transparent; color:#fff; border-color:rgba(255,255,255,.55); }
 .hero .btn-s:hover{ color:#fff; border-color:#fff; box-shadow:none; }
@@ -462,19 +462,19 @@ footer a:hover{ color:var(--lime); }
 <section id="hero" class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">A free 4-part series on The Growth Show</p>
+      <p class="eyebrow">A free 4-part series on The Growth Show for dietitians, therapists &amp; coaches</p>
       <h1>Getting found online <em>in the age of AI</em></h1>
       <div class="hero-body">
-        <p>You know people are searching for the kind of care you provide. But is your website actually showing up?</p>
-        <p>Between Google, ChatGPT, and all the changes happening with SEO, it’s hard to know what matters anymore.</p>
-        <p>Join Whitney and SEO expert Matt Kuncaitus for a <b>free, four-part podcast series</b> where we’re breaking down what’s changed, what still works, and how to make sure the right people can find your practice.</p>
-        <p>Plus, we’re wrapping things up with a <b>live website audit and Q&amp;A</b>!</p>
+        <p>Google isn’t the only place people are searching for dietitians, therapists, and coaches anymore. They’re asking ChatGPT, using AI-powered search results, and finding businesses in ways that look a lot different than they did even a year ago.</p>
+        <p class="hero-q">So what does that mean for your practice?</p>
+        <p>Join Whitney Bateson and SEO expert Matt Kuncaitus for a <b>free, four-part podcast series</b> on what’s changing, what still works, and where to focus your efforts so the right clients can find you.</p>
+        <p>And we’re wrapping it all up with a <b>live website audit and Q&amp;A</b>!</p>
       </div>
       <div class="hero-ctas">
-        <a class="btn btn-p" href="#" data-form id="hero-btn">Save my seat for the finale</a>
-        <a class="btn btn-s" href="#episodes" id="hero-btn2">See the episodes</a>
+        <a class="btn btn-p" href="#" data-form id="hero-btn">Save my seat for the live finale</a>
+        <a class="btn btn-s" href="#episodes" id="hero-btn2">Explore the episodes</a>
       </div>
-      <p class="hero-note" id="hero-note">Anyone can join the live finale. Submitting your site for an audit is optional.</p>
+      <p class="hero-note" id="hero-note">The live finale is open to everyone. Submitting your website for an audit is optional.</p>
     </div>
     <div class="hero-photo">
       <img src="hero.jpg" alt="Hands typing on a laptop" width="960" height="1440" fetchpriority="high">
@@ -486,15 +486,14 @@ footer a:hover{ color:var(--lime); }
 <section id="questions">
   <div class="wrap">
     <div class="center">
-      <p class="eyebrow">What we’re covering</p>
-      <h2 class="h2">SEO has changed. <em>Here’s what that means for your practice.</em></h2>
+      <h2 class="h2">What we’re <em>covering</em></h2>
     </div>
     <div class="boxes">
       <div class="box">When your ideal clients search for help online, will they <strong>find you or someone else</strong>?</div>
-      <div class="box">If they ask ChatGPT or Claude, will <strong>your website be the one it cites</strong>?</div>
-      <div class="box">And how do you <strong>stay findable</strong> on the weeks you don’t post anything?</div>
+      <div class="box">If someone asks ChatGPT or Claude for a recommendation, does your practice <strong>have a chance of showing up</strong>?</div>
+      <div class="box">And what can you do to <strong>improve your visibility</strong> without adding more to your already full plate?</div>
     </div>
-    <p class="fit-close">Matt Kuncaitus, our SEO expert, joins me for all four episodes. If you’re not a tech person, this series is especially for you.</p>
+    <p class="fit-close">No technical background required. Just practical conversations about SEO and how it fits into growing your practice.</p>
   </div>
 </section>
 
@@ -794,9 +793,9 @@ var SERIES = {
     // From the audit cutoff on, sign-up is for the call and questions only
     $("tb-text").innerHTML = "Audit requests are closed, but you can still join us live <b>Thursday, Oct 29 at 2 pm ET</b>.";
     $("tb-btn").textContent = "Save my free seat";
-    $("hero-btn").textContent = "Save my seat for the finale";
+    $("hero-btn").textContent = "Save my seat for the live finale";
     $("cl-btn").textContent = "Save my seat for the finale";
-    $("hero-note").textContent = "Audit requests are closed, but anyone can still join the live finale and send in questions.";
+    $("hero-note").textContent = "Audit requests are closed, but the live finale is still open to everyone. Send in your questions!";
     $("cl-lead").textContent = "Audit requests are closed, but anyone can still join us live. Bring your questions, and see everything from the series put into practice.";
     $("ec-deadline").textContent = "Audit requests are now closed. We've picked our 2 practices!";
     $("ec-invite").textContent = "Everyone's invited! It's always more fun with more people in the room. 🙌";

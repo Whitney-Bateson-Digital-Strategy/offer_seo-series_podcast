@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Getting Found Online in the Age of AI · Podcast Series · Whitney Bateson</title>
+<meta name="description" content="A 4-part podcast series for health and nutrition practitioners on SEO and AI search, ending with a live taping where we audit two practice websites. Thursday, October 29 at 2 pm ET." />
+<meta property="og:title" content="Getting Found Online in the Age of AI" />
+<meta property="og:description" content="A 4-part podcast series plus a live taping with two real website audits. Thursday, Oct 29 at 2 pm ET." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="https://whitneybateson.com/wp-content/uploads/2025/06/cropped-SubmarkBox-YellowOrange-300x300.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f7f5f0;
+  --lime-bg:#f4f8dc;
+  --hi:rgba(227,246,150,0.30);
+  --hi-md:rgba(227,246,150,0.62);
+  --navy:#02525d;
+  --navy-dk:#013d46;
+  --coral:#ff7f50;
+  --coral-dk:#e6663b;
+  --lime:#e3f696;
+  --text:#1a1a1a;
+  --muted:#5c5c5c;
+  --faint:#8a8a8a;
+  --white:#ffffff;
+  --border:rgba(26,26,26,0.09);
+  --peach:rgba(255,127,80,0.16);
+  --r:6px;
+  --r-lg:8px;
+  --sh-sm:0 1px 3px rgba(2,82,93,0.05);
+  --sh-md:0 4px 22px rgba(2,82,93,0.08);
+  --head:'Cormorant Garamond',Georgia,serif;
+  --body:'Nunito',system-ui,sans-serif;
+  --mw:1120px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);background:var(--white);color:var(--text);font-size:15.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.15;font-weight:500;color:var(--navy);font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1}
+p{margin-bottom:14px}p:last-child{margin-bottom:0}
+a{color:var(--navy);text-underline-offset:3px}
+a:hover{color:var(--coral-dk)}
+strong,b{font-weight:700}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+
+.wrap{max-width:var(--mw);margin:0 auto;padding:0 32px}
+.narrow{max-width:760px}
+@media(max-width:640px){.wrap{padding:0 18px}}
+section{padding:88px 0}
+@media(max-width:640px){section{padding:56px 0}}
+
+.eyebrow{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-dk);margin-bottom:14px}
+.divider{display:none}
+.center{text-align:center}
+.center .divider{margin-left:auto;margin-right:auto}
+.h2{font-size:clamp(1.9rem,3.6vw,2.5rem);margin-bottom:18px;line-height:1.2}
+.h2 em{font-style:italic;color:var(--coral-dk)}
+.hl{background:rgba(255,127,80,.18);padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hl-lime{background:var(--lime);padding:0 .15em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.kicker{font-family:var(--head);font-style:italic;font-size:1.25rem;color:var(--text);margin-bottom:8px}
+b.nv{color:var(--navy)}
+.lead{font-size:16px;color:var(--muted);line-height:1.7}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--body);font-weight:700;letter-spacing:.085em;text-transform:uppercase;text-decoration:none;border:none;border-radius:4px;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s,border-color .2s,color .2s;text-align:center;line-height:1.35}
+.btn-p{background:var(--coral);color:var(--white);font-size:13px;padding:17px 28px}
+.btn-p:hover{background:var(--coral-dk);color:var(--white);transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,127,80,.32)}
+.btn-s{background:var(--white);color:var(--navy);border:1px solid rgba(2,82,93,.32);font-size:13px;padding:16px 26px}
+.btn-s:hover{border-color:var(--navy);color:var(--navy);transform:translateY(-1px);box-shadow:var(--sh-md)}
+.btn-sm{font-size:11px;padding:11px 18px}
+.btn[aria-disabled="true"]{background:var(--white);color:var(--faint);border:1px solid var(--border);box-shadow:none;transform:none;cursor:default;pointer-events:none}
+@media(max-width:540px){.btn-p,.btn-s{width:100%}}
+
+/* status pills */
+.pill{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.p-open{background:var(--lime);color:var(--navy)}
+.p-soon{background:var(--peach);color:var(--coral-dk)}
+.p-closed{background:var(--white);color:var(--faint);border:1px solid var(--border)}
+.p-live{background:var(--navy);color:var(--white)}
+
+/* announcement bar */
+.bar{background:var(--navy-dk);color:var(--white);padding:10px 0;font-size:14px;font-weight:600}
+.bar-row{display:flex;align-items:center;justify-content:center;gap:12px 22px;flex-wrap:wrap}
+.bar-text{display:flex;align-items:center;gap:10px}
+.bar-text .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);flex-shrink:0}
+.bar-text b{color:var(--lime)}
+.bar-cd{display:flex;gap:6px}
+.bar-cd div{background:rgba(255,255,255,.1);border-radius:4px;min-width:42px;text-align:center;padding:3px 4px;line-height:1.1}
+.bar-cd b{display:block;font-family:var(--head);font-size:1.15rem;font-weight:600;font-variant-numeric:lining-nums tabular-nums}
+.bar-cd span{font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.bar .btn{padding:10px 18px;font-size:11px}
+@media(max-width:640px){.bar{font-size:13px}.bar-cd{display:none}.bar .btn{width:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(2,82,93,.07)}
+.head-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+.logo{flex-shrink:0;display:block}
+.logo img{height:40px;width:auto;max-width:none}
+@media(max-width:540px){.logo img{height:32px}.head-row .btn{padding:10px 14px;font-size:10.5px;width:auto}}
+
+/* hero */
+#hero{padding:76px 0 92px;background:var(--white)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:40px}#hero{padding:48px 0 60px}}
+.hero-copy{padding-top:28px}
+@media(max-width:940px){.hero-copy{padding-top:0}}
+.hero-h1{font-size:clamp(2.4rem,5vw,3.4rem);line-height:1.15;margin-bottom:22px;font-weight:500}
+.hero-h1 .line2{display:block}
+.hero-body{font-size:16px;color:var(--muted);margin-bottom:28px;max-width:520px}
+.hero-body em{color:var(--navy);font-style:italic}
+.hero-note{font-size:13.5px;color:var(--text);font-style:italic;margin-top:12px}
+
+/* event card */
+.event-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:0 10px 40px rgba(2,82,93,.10);padding:32px 30px}
+@media(max-width:540px){.event-card{padding:26px 20px}}
+.ec-title{font-size:1.55rem;margin-bottom:18px}
+.ec-date{font-family:var(--head);font-size:clamp(2.1rem,4.4vw,2.6rem);font-weight:500;color:var(--navy);line-height:1.05}
+.ec-time{font-weight:700;color:var(--text);font-size:15.5px;margin-top:6px}
+.ec-list{list-style:none;margin:22px 0 18px;padding:18px 0 0;border-top:1px solid var(--border)}
+.ec-list li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:var(--text);padding:5px 0;line-height:1.5}
+.ec-list svg{width:18px;height:18px;flex-shrink:0;margin-top:2px;fill:none;stroke:var(--coral-dk);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.ec-invite{font-size:15px;color:var(--muted);margin-bottom:20px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
+.cd{background:var(--cream);border-radius:var(--r);text-align:center;padding:10px 4px}
+.cd b{display:block;font-family:var(--head);font-size:1.9rem;line-height:1;color:var(--navy);font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1}
+.cd span{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.event-card .btn{width:100%}
+.ec-deadline{font-size:13.5px;color:var(--muted);text-align:center;margin-top:14px}
+
+/* marquee */
+#strip{background:var(--cream);padding:34px 0 0;border-top:1px solid var(--border)}
+.strip-label{display:flex;align-items:center;justify-content:center;gap:14px;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin-bottom:18px;padding:0 20px}
+.strip-label::before,.strip-label::after{content:'';flex:0 0 40px;height:1px;background:rgba(2,82,93,0.25)}
+.marquee-bar{background:var(--navy);padding:14px 0;overflow:hidden}
+.marquee{display:flex;overflow:hidden}
+.marquee-track{display:flex;flex-shrink:0;animation:mq 45s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.mq-item{white-space:nowrap;color:var(--white);font-size:14.5px;padding:2px 24px;position:relative}
+.mq-item b{color:var(--lime);font-weight:700}
+.mq-item::after{content:'✨';position:absolute;right:-9px;top:50%;transform:translateY(-50%);font-size:13px}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none;flex-wrap:wrap;justify-content:center}.marquee-track[aria-hidden]{display:none}}
+
+/* what we're covering */
+#questions{background:var(--cream)}
+.q-card{max-width:760px;margin:36px auto 0;background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--sh-md);padding:10px 34px}
+@media(max-width:540px){.q-card{padding:6px 20px}}
+.q-row{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-top:1px solid var(--border)}
+.q-row:first-child{border-top:0}
+.q-ic{width:24px;height:24px;border-radius:50%;border:1.5px solid var(--coral);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.q-ic svg{width:13px;height:13px;fill:none;stroke:var(--coral-dk);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.q-row p{font-size:16.5px;color:var(--text);line-height:1.6}
+.q-foot{text-align:center;max-width:620px;margin:30px auto 0;font-family:var(--head);font-style:italic;font-size:1.25rem;color:var(--text);line-height:1.45}
+
+/* episodes */
+#episodes{background:var(--lime-bg)}
+.ep-list{display:flex;flex-direction:column;gap:14px;margin-top:42px}
+.ep{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--sh-sm);padding:24px 26px;display:grid;grid-template-columns:62px 1fr auto;gap:18px 22px;align-items:center}
+.ep.is-live{background:var(--white)}
+.ep-badge{width:62px;height:62px;border-radius:var(--r);background:rgba(2,82,93,.08);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ep-badge span{font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.ep-badge b{font-family:var(--head);font-size:1.9rem;line-height:1;color:var(--navy);font-variant-numeric:lining-nums}
+.ep.featured .ep-badge{background:var(--peach)}
+.ep.featured .ep-badge b{color:var(--coral-dk)}
+.ep-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.ep-date{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--coral-dk)}
+.ep h3{font-size:1.45rem;margin-bottom:6px}
+.ep p{font-size:15px;color:var(--muted);line-height:1.6}
+.ep-cta{display:flex;flex-direction:column;gap:8px;align-items:stretch;min-width:170px}
+.ep-cta:empty{display:none}
+.ep .ep-links{margin-top:10px}
+.ep-links{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;font-weight:700}
+@media(max-width:820px){.ep{grid-template-columns:52px 1fr;gap:16px;padding:20px}.ep-badge{width:52px;height:52px}.ep-badge b{font-size:1.6rem}.ep-cta{grid-column:1/-1;min-width:0}}
+.ep-player{grid-column:1/-1}
+.ep-player iframe{display:block;width:100%;height:190px;border:0;border-radius:var(--r)}
+.ep-ph{grid-column:1/-1;border:1.5px dashed rgba(2,82,93,.3);border-radius:var(--r);background:var(--cream);padding:22px;text-align:center;font-size:14px;color:var(--muted)}
+.ep-ph b{display:block;color:var(--navy);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.ep-extra{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;border-radius:var(--r);padding:16px 18px;background:var(--lime-bg)}
+.ep-extra.coral{background:rgba(255,127,80,.08)}
+.ep-extra-icon{width:40px;height:40px;border-radius:var(--r);background:var(--white);display:flex;align-items:center;justify-content:center}
+.ep-extra-icon svg{width:20px;height:20px;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ep-extra.coral .ep-extra-icon svg{stroke:var(--coral-dk)}
+.ep-extra-k{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-dk)}
+.ep-extra h4{font-size:1.2rem;margin:1px 0 2px}
+.ep-extra p{font-size:14px;color:var(--muted);line-height:1.5}
+@media(max-width:640px){.ep-extra{grid-template-columns:1fr}.ep-extra-icon{display:none}}
+.listen-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+
+/* hosts */
+.host-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:42px}
+@media(max-width:760px){.host-grid{grid-template-columns:1fr}}
+.host{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;display:flex;gap:20px;align-items:flex-start;box-shadow:var(--sh-sm)}
+.host img,.host .avatar{width:92px;height:92px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--hi-md)}
+.host .avatar{background:var(--navy);color:var(--lime);display:flex;align-items:center;justify-content:center;font-family:var(--head);font-size:2.4rem;font-weight:600}
+.host h3{font-size:1.5rem;margin-bottom:2px}
+.host .role{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-dk);margin-bottom:10px}
+.host p{font-size:15px;color:var(--muted);line-height:1.6}
+@media(max-width:480px){.host{flex-direction:column}}
+
+/* faq */
+#faq{background:var(--cream)}
+.faq{max-width:780px;margin:40px auto 0;display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--sh-sm)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;justify-content:space-between;gap:16px;align-items:center;font-family:var(--head);font-size:1.25rem;font-weight:600;color:var(--navy)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-family:var(--body);font-size:22px;color:var(--coral);flex-shrink:0;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 22px 20px;font-size:15.5px;color:var(--muted)}
+
+/* closing */
+#closing{text-align:center;background:var(--cream);border-top:1px solid var(--border)}
+#closing .h2{max-width:720px;margin-left:auto;margin-right:auto}
+#closing .btn{margin-top:28px}
+
+footer{border-top:1px solid var(--border);padding:30px 0;text-align:center;font-size:13.5px;color:var(--faint)}
+footer a{color:var(--muted)}
+
+.preview-flag{position:fixed;bottom:14px;left:14px;z-index:99;background:var(--text);color:var(--white);font-size:12px;padding:8px 12px;border-radius:var(--r);font-weight:600;display:none}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap bar-row">
+  <div class="bar-text"><span class="dot"></span><span id="bar-text">Want your site audited live? Submit it by <b>Wednesday, October 28</b>.</span></div>
+  <div class="bar-cd" id="bar-cd" aria-label="Time left">
+    <div><b id="bc-d">--</b><span>Days</span></div><div><b id="bc-h">--</b><span>Hrs</span></div><div><b id="bc-m">--</b><span>Min</span></div><div><b id="bc-s">--</b><span>Sec</span></div>
+  </div>
+  <a class="btn btn-p" href="#" data-form id="bar-btn">Submit my site</a>
+</div></div>
+
+<header>
+  <div class="wrap head-row">
+    <a class="logo" href="https://whitneybateson.com/" aria-label="Whitney Bateson home"><img src="logo.png" alt="Whitney Bateson" width="200" height="60"></a>
+    <a class="btn btn-p btn-sm" href="#" data-form id="head-btn">Save my free seat</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO + LIVE CALL -->
+<section id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Podcast series + live audit call</span>
+      <h1 class="hero-h1">Getting Found Online <span class="line2">in the <span class="hl">Age of AI</span></span></h1>
+      <p class="hero-body">When someone searches <em>“dietitian for IBS who offers virtual visits”</em> on Google, or asks ChatGPT the same thing… does your practice come up? We're breaking down <b class="nv">what's changed with SEO</b> (and what still matters) in a 4-part podcast series. Then we're <b class="nv">auditing two practice websites live</b>, and you're invited!</p>
+      <a class="btn btn-p" href="#" data-form id="hero-btn">Save my free seat &amp; submit my site for an audit</a>
+      <p class="hero-note" id="hero-note">Submitting your site for an audit is optional when you sign up.</p>
+    </div>
+
+    <aside class="event-card" aria-labelledby="ec-title">
+      <span class="eyebrow" id="ec-eyebrow">Live on Zoom</span>
+      <h2 class="ec-title" id="ec-title">Live SEO audits + Q&amp;A</h2>
+      <div class="ec-date" id="ec-date">Thursday, October 29</div>
+      <div class="ec-time" id="ec-time">2 pm ET / 1 pm CT / 12 pm MT / 11 am PT</div>
+      <ul class="ec-list" id="ec-list">
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>2 live website audits, one local practice and one virtual</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Your SEO questions, answered live</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>A first look at our new SEO services</li>
+      </ul>
+      <p class="ec-invite" id="ec-invite">Everyone's invited, even if you don't want an audit! It's always more fun with more people in the room. 🙌</p>
+      <div class="countdown" id="countdown" aria-label="Time until the live taping">
+        <div class="cd"><b id="cd-d">--</b><span>Days</span></div>
+        <div class="cd"><b id="cd-h">--</b><span>Hours</span></div>
+        <div class="cd"><b id="cd-m">--</b><span>Mins</span></div>
+        <div class="cd"><b id="cd-s">--</b><span>Secs</span></div>
+      </div>
+      <a class="btn btn-p" href="#" data-form id="ec-btn">Save my free seat</a>
+      <p class="ec-deadline" id="ec-deadline">Audit requests close Wednesday, October 28 at 2 pm ET, 24 hours before the call.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- FOR YOU IF -->
+<div id="strip">
+  <div class="strip-label">This series is for you if…</div>
+  <div class="marquee-bar"><div class="marquee" aria-label="This series is for you if you want more of the right clients finding you, you're tired of relying on social media, you want to show up when people ask ChatGPT, you're not a tech person, or you run a local or virtual practice.">
+    <div class="marquee-track"><span class="mq-item">You want more of the <b>right clients</b> finding you</span><span class="mq-item">You're <b>tired of relying</b> on social media</span><span class="mq-item">You want to show up when people <b>ask ChatGPT</b></span><span class="mq-item">You're <b>not a tech person</b> (and that's OK!)</span><span class="mq-item">You run a <b>local or virtual</b> practice</span></div><div class="marquee-track" aria-hidden="true"><span class="mq-item">You want more of the <b>right clients</b> finding you</span><span class="mq-item">You're <b>tired of relying</b> on social media</span><span class="mq-item">You want to show up when people <b>ask ChatGPT</b></span><span class="mq-item">You're <b>not a tech person</b> (and that's OK!)</span><span class="mq-item">You run a <b>local or virtual</b> practice</span></div>
+  </div></div>
+</div>
+
+<!-- WHAT WE'RE COVERING -->
+<section id="questions">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">What we're covering</span>
+      <h2 class="h2">Here's what we're answering <em>in this series</em></h2>
+    </div>
+    <div class="q-card">
+      <div class="q-row"><span class="q-ic"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><p>When your clients are searching for help online, will they <span class="hl-lime">find you</span>, or someone else?</p></div>
+      <div class="q-row"><span class="q-ic"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><p>When they ask ChatGPT or Claude a question, will <span class="hl-lime">your website be cited</span>?</p></div>
+      <div class="q-row"><span class="q-ic"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><p>How can you be sure people <span class="hl-lime">keep finding your practice</span>, even when you're not posting anything?</p></div>
+    </div>
+    <p class="q-foot">I'm joined by Matt Kuncaitus, our SEO expert, for all four episodes. And if you're not a tech person, this one's especially for you!</p>
+  </div>
+</section>
+
+<!-- EPISODES -->
+<section id="episodes">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">The series</span>
+      <h2 class="h2">4 episodes, <em>Oct 26 to Nov 2</em></h2>
+      <div class="divider"></div>
+      <p class="lead narrow" style="margin:0 auto">A new episode drops on The Growth Show each day, Monday through Wednesday. Then on Thursday, we tape the final episode live with you! 🎙️</p>
+    </div>
+    <div class="ep-list" id="ep-list"><!-- rendered by script from SERIES.episodes --></div>
+    <div class="listen-row">
+      <a class="btn btn-s btn-sm" id="apple-link" href="#" target="_blank" rel="noopener">Listen on Apple</a>
+      <a class="btn btn-s btn-sm" id="spotify-link" href="#" target="_blank" rel="noopener">Listen on Spotify</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOSTS -->
+<section id="hosts">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Your hosts</span>
+      <h2 class="h2">Meet <em>Whitney and Matt</em></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="host-grid">
+      <div class="host">
+        <img src="whitney.jpg" alt="Whitney Bateson" width="92" height="92">
+        <div>
+          <h3>Whitney Bateson</h3>
+          <div class="role">MPH, RD · Host of The Growth Show</div>
+          <p>I'm a former dietitian turned marketing strategist, and I've helped over 130 dietitians, therapists, and coaches launch websites and marketing systems that bring in clients. No one teaches us this stuff in school, so I'm here to make it simple!</p>
+        </div>
+      </div>
+      <div class="host">
+        <div class="avatar" aria-hidden="true">MK</div>
+        <div>
+          <h3>Matt Kuncaitus</h3>
+          <div class="role">SEO expert · Team WBDS</div>
+          <p>Matt has spent the last eight years helping businesses improve how they show up online. He's leading our new SEO services, and he's the one sharing his screen for the live audits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2">A few questions you might have 🙋</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="faq">
+      <details><summary>Do I need to be techy to get something out of this?</summary><div class="a">Not at all! This series is made for practitioners who aren't technical. We keep it simple and skip the jargon.</div></details>
+      <details><summary>Is this for local or virtual practices?</summary><div class="a">Both! In Episode 3, we get into how your strategy changes depending on which one you are, and on the live call we're auditing one of each.</div></details>
+      <details><summary>Is the live call free?</summary><div class="a">Yep, it's totally free.</div></details>
+      <details><summary>Do I have to submit my site to sign up?</summary><div class="a">Nope! The audit is optional. You can register for the call and send in your questions without submitting a site.</div></details>
+      <details><summary>How do you pick the 2 sites to audit?</summary><div class="a">When you sign up, say yes to the audit question and tell us a bit about your practice. We'll choose 2 practices from those requests and let you know before the call if you're picked.</div></details>
+      <details><summary>What if I can't make it live?</summary><div class="a">Sign up anyway and submit your question ahead of time. The taping airs on the podcast Monday, Nov 2.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section id="closing">
+  <div class="wrap">
+    <span class="eyebrow" id="cl-eyebrow">See you Thursday, Oct 29 at 2 pm ET</span>
+    <p class="kicker">Ready to get found by more of the right clients?</p>
+    <h2 class="h2">Save your seat for the <em>live taping</em></h2>
+    <p class="lead narrow" style="margin:0 auto" id="cl-lead">Save your free seat, send in your questions, and submit your site for a chance at a live audit. See you there!</p>
+    <a class="btn btn-p" href="#" data-form id="cl-btn">Save my free seat &amp; submit my site for an audit</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Questions? Email <a href="mailto:info@whitneybateson.com">info@whitneybateson.com</a> · © 2026 Whitney Bateson Digital Strategy, LLC · <a href="https://whitneybateson.com/privacy-policy">Privacy Policy</a></div>
+</footer>
+
+<div class="preview-flag" id="preview-flag"></div>
+
+<script>
+/* =====================================================================
+   EDIT HERE: everything that needs swapping lives in this block.
+   Times are UTC. ET is UTC-4 until Nov 1, 2026 (UTC-5 after).
+   ===================================================================== */
+var SERIES = {
+  // Airtable form share link, e.g. "https://airtable.com/appXXXXXXXXXXXXXX/shrXXXXXXXXXXXXXX".
+  // Every sign-up button on the page (and the Episode 4 callout) opens it. Leave "" until it's ready.
+  airtableFormUrl: "",
+  // Optional: a second version of the form WITHOUT the audit question. If set, the page
+  // switches to it automatically at the audit cutoff (Wed Oct 28, 2 pm ET), so nobody has
+  // to edit the live form at 2 pm. Leave "" to keep using the form above.
+  airtableFormUrlAfterCutoff: "",
+
+  // Per episode (in episodes below): paste the Acast episode ID (or the full
+  // embed URL) into acast, and the episode's blog post URL into showNotes.
+  // Players show automatically once an episode's release time passes.
+  // Add ?placeholders=1 to the page URL to see where every player will sit.
+
+  // Freebie (Episode 2). Shows as a download box inside the Episode 2 card.
+  // The button stays locked until freebieUnlock.
+  freebieUrl: "",
+  freebieUnlock: "2026-10-27T04:00:00Z",        // Tue Oct 27, 12 am ET
+
+  auditCutoff:  "2026-10-28T18:00:00Z",          // Wed Oct 28, 2 pm ET
+  liveStart:    "2026-10-29T18:00:00Z",          // Thu Oct 29, 2 pm ET
+  liveEnd:      "2026-10-29T19:30:00Z",          // assumes ~90 min
+
+  // Zoom join link. Leave "" so the link only goes to people who register through Airtable.
+  // If you fill it in, it shows as a "Join now" button on the page during the live window.
+  zoomUrl: "",
+
+  // Acast player. Each episode's ID is the last part of its embed URL:
+  // https://embed.acast.com/65d4445a7e29af00164868b8/<EPISODE ID>
+  acastShowId: "65d4445a7e29af00164868b8",
+  acastParams: "accentColor=161616&bgColor=fc7c54&secondaryColor=161616",
+
+  appleShow:   "https://podcasts.apple.com/us/podcast/the-growth-show-with-whitney-bateson/id1734664470",
+  spotifyShow: "https://open.spotify.com/show/7EN6VaQaH8Kb1wfEc5Ahvo",
+
+  episodes: [
+    { n:1, acast:"", showNotes:"", date:"Mon, Oct 26", release:"2026-10-26T04:00:00Z",
+      title:"The Truth About SEO in the AI Age",
+      desc:"What SEO actually is (quick and simple, promise!), how it's changed, and what AI means for your practice. Plus a 2-minute test you can do today to see who shows up when your dream client searches." },
+    { n:2, acast:"", showNotes:"", date:"Tue, Oct 27", release:"2026-10-27T04:00:00Z",
+      title:"What “Doing SEO” Actually Looks Like",
+      desc:"Matt walks through what “doing SEO” really means for your website, the 3 layers that matter, and the mistakes we see most often. This one comes with a free resource to score your own site!",
+      extra:"freebie" },
+    { n:3, acast:"", showNotes:"", date:"Wed, Oct 28", release:"2026-10-28T04:00:00Z",
+      title:"Why Good SEO Still Doesn't Fill Your Calendar",
+      desc:"Getting traffic but your calendar still isn't full? We're talking about the strategy mistakes we see on audits, how the approach changes for local and virtual practices, and why these problems are so hard to spot on your own site." },
+    { n:4, acast:"", showNotes:"", date:"Thu, Oct 29 · Live", release:"2026-11-02T05:00:00Z", live:true,
+      title:"We Audited Two Practice Websites Live",
+      desc:"Taped live on Zoom! We audit two real practice websites, answer your questions, and I share the new SEO services we're launching. Airs on the podcast Monday, Nov 2." }
+  ]
+};
+/* ===================================================================== */
+
+(function(){
+  // ?preview=2026-10-28T15:00 (ET) shows the page as it will look at that time.
+  // ?placeholders=1 shows where each episode player will sit.
+  var qs = new URLSearchParams(location.search), pv = qs.get("preview");
+  var offset = 0;
+  if (pv) {
+    var t = new Date(pv.length <= 16 ? pv + ":00-04:00" : pv);
+    if (!isNaN(t)) {
+      offset = t - Date.now();
+      var f = document.getElementById("preview-flag");
+      f.textContent = "Preview: " + pv + " ET"; f.style.display = "block";
+    }
+  }
+  function now(){ return new Date(Date.now() + offset); }
+  function d(s){ return new Date(s); }
+  var $ = function(id){ return document.getElementById(id); };
+  var T = { cutoff:d(SERIES.auditCutoff), start:d(SERIES.liveStart), end:d(SERIES.liveEnd), fb:d(SERIES.freebieUnlock) };
+
+  function phase(){
+    var n = now();
+    if (n < T.cutoff) return "open";
+    if (n < T.start)  return "closed";
+    if (n < T.end)    return "live";
+    return "after";
+  }
+  function formUrl(){
+    return (phase() !== "open" && SERIES.airtableFormUrlAfterCutoff) || SERIES.airtableFormUrl || "#";
+  }
+
+  /* ---------- Episodes ---------- */
+  var SHOW_PH = qs.has("placeholders");
+  var ICON_DL = '<svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+  var ICON_CAL = '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>';
+  function acastSrc(v){
+    if (!v) return "";
+    if (v.indexOf("http") === 0) return v;
+    return "https://embed.acast.com/" + SERIES.acastShowId + "/" + v + "?" + SERIES.acastParams;
+  }
+  function freebieBox(){
+    var btn;
+    if (now() < T.fb) btn = '<a class="btn btn-s btn-sm" aria-disabled="true">Unlocks Tue, Oct 27</a>';
+    else if (!SERIES.freebieUrl) btn = '<a class="btn btn-s btn-sm" aria-disabled="true">Coming soon</a>';
+    else btn = '<a class="btn btn-p btn-sm" href="' + SERIES.freebieUrl + '" target="_blank" rel="noopener">Download free</a>';
+    return '<div class="ep-extra" id="freebie"><div class="ep-extra-icon">' + ICON_DL + '</div>' +
+      '<div><div class="ep-extra-k">Free resource</div><h4>Score your site in 10 minutes</h4>' +
+      '<p>Matt\'s self-check for the 3 layers of SEO, so you can see where your site stands and where to focus first.</p></div>' + btn + '</div>';
+  }
+  function liveBox(){
+    var p = phase(), title, body, btn;
+    if (p === "live") {
+      title = "We're live right now!";
+      body = SERIES.zoomUrl ? "Come join us on Zoom." : "Check your email for the Zoom link.";
+      btn = SERIES.zoomUrl ? '<a class="btn btn-p btn-sm" href="' + SERIES.zoomUrl + '" target="_blank" rel="noopener">Join now</a>' : '';
+    } else {
+      title = "Join us live on Thursday, Oct 29 at 2 pm ET";
+      body = p === "open" ? "Save your seat, send in your SEO questions, and opt in for a chance at a live audit."
+                          : "Save your seat and send in your SEO questions. We'll answer them live!";
+      btn = '<a class="btn btn-p btn-sm" href="' + formUrl() + '">Save my free seat</a>';
+    }
+    return '<div class="ep-extra coral"><div class="ep-extra-icon">' + ICON_CAL + '</div>' +
+      '<div><div class="ep-extra-k">Live taping</div><h4>' + title + '</h4><p>' + body + '</p></div>' + btn + '</div>';
+  }
+  function renderEpisodes(){
+    var n = now(), html = "";
+    SERIES.episodes.forEach(function(ep){
+      var out = n >= d(ep.release), src = acastSrc(ep.acast);
+      var pill, cta = "", player = "", extra = "";
+      if (ep.live && !out) {
+        var p = phase();
+        pill = p === "live" ? '<span class="pill p-live">Live now</span>'
+             : p === "after" ? '<span class="pill p-soon">Airs Mon, Nov 2</span>'
+             : '<span class="pill p-soon">Live on Zoom</span>';
+        if (p !== "after") extra = liveBox();
+      } else if (out) {
+        pill = '<span class="pill p-open">' + (ep.live ? 'Replay out now' : 'Out now') + '</span>';
+        if (!src) cta = '<a class="btn btn-p btn-sm" href="' + SERIES.appleShow + '" target="_blank" rel="noopener">Listen now</a>';
+      } else {
+        pill = '<span class="pill p-closed">Coming soon</span>';
+        cta = '<a class="btn btn-s btn-sm" aria-disabled="true">Airs ' + ep.date.split(",")[1].split("·")[0].trim() + '</a>';
+      }
+      if (ep.extra === "freebie") extra = freebieBox();
+      if (out && src) player = '<div class="ep-player"><iframe src="' + src + '" title="Listen to Episode ' + ep.n + '" loading="lazy" allow="autoplay"></iframe></div>';
+      else if (SHOW_PH) player = '<div class="ep-ph"><b>Episode ' + ep.n + ' player</b>' + (ep.acast ? 'Shows here once it airs' : 'Add the Acast episode ID in SERIES.episodes') + '</div>';
+      var notes = (out && ep.showNotes) ? '<div class="ep-links"><a href="' + ep.showNotes + '">Show notes →</a></div>' : '';
+      html += '<article class="ep' + (ep.live ? ' featured' : '') + (out && !ep.live ? ' is-live' : '') + '">' +
+        '<div class="ep-badge"><span>Ep</span><b>' + ep.n + '</b></div>' +
+        '<div><div class="ep-meta"><span class="ep-date">' + ep.date + '</span>' + pill + '</div>' +
+        '<h3>' + ep.title + '</h3><p>' + ep.desc + '</p>' + notes + '</div>' +
+        '<div class="ep-cta">' + cta + '</div>' + player + extra + '</article>';
+    });
+    $("ep-list").innerHTML = html;
+  }
+
+  /* ---------- Phase-dependent copy ---------- */
+  function renderPhase(p){
+    document.querySelectorAll("[data-form]").forEach(function(a){ a.href = formUrl(); });
+    if (p === "open") return;
+
+    // From the audit cutoff on, sign-up is for the call and questions only
+    $("hero-btn").textContent = "Save my free seat";
+    $("cl-btn").textContent = "Save my free seat";
+    $("hero-note").textContent = "Audit requests are closed, but you can still sign up and send in your questions.";
+    $("cl-lead").textContent = "Save your free seat and send in your questions. See you there!";
+    $("ec-deadline").textContent = "Audit requests are now closed. We've picked our 2 practices!";
+    $("ec-invite").textContent = "Everyone's invited! It's always more fun with more people in the room. 🙌";
+    $("bar-text").innerHTML = "Join us live <b>Thursday, October 29 at 2 pm ET</b>.";
+    $("bar-btn").textContent = "Save my free seat";
+
+    if (p === "live") {
+      $("bar-text").innerHTML = "We're <b>live on Zoom</b> right now!";
+      $("bar-btn").style.display = "none"; $("bar-cd").style.display = "none";
+      $("ec-eyebrow").textContent = "Happening now";
+      $("countdown").style.display = "none";
+      $("ec-deadline").style.display = "none";
+      if (SERIES.zoomUrl) { $("ec-btn").textContent = "Join us live"; $("ec-btn").href = SERIES.zoomUrl; $("ec-btn").target = "_blank"; }
+    }
+    if (p === "after") {
+      $("bar-text").innerHTML = "Missed the live taping? It airs on the podcast <b>Monday, Nov 2</b>.";
+      $("bar-cd").style.display = "none";
+      $("bar-btn").textContent = "Listen"; $("bar-btn").href = "#episodes";
+      $("ec-eyebrow").textContent = "That's a wrap";
+      $("ec-title").textContent = "Thanks for joining us!";
+      $("ec-date").textContent = "Airs Monday, Nov 2";
+      $("ec-time").textContent = "The full taping, on The Growth Show";
+      ["ec-list","ec-invite","countdown","ec-deadline"].forEach(function(id){ $(id).style.display = "none"; });
+      [["hero-btn","Listen to the series"],["ec-btn","Listen to the series"],["cl-btn","Listen to the series"],["head-btn","Listen"]].forEach(function(x){
+        $(x[0]).textContent = x[1]; $(x[0]).href = "#episodes"; $(x[0]).removeAttribute("target");
+      });
+      $("hero-note").textContent = "Catch all four episodes on The Growth Show.";
+      $("cl-eyebrow").textContent = "Getting Found Online in the Age of AI";
+      $("cl-lead").textContent = "Catch all four episodes on The Growth Show.";
+    }
+  }
+
+  /* ---------- Countdown ---------- */
+  function tick(){
+    // Re-render if a cutoff passes while the page is open (e.g. audit requests closing at 2 pm Wed)
+    if (phase() !== p) { p = phase(); renderEpisodes(); renderPhase(p); }
+    var ms = T.start - now();
+    // The bar counts down to the audit cutoff first, then to the live call
+    var bt = (now() < T.cutoff ? T.cutoff : T.start) - now();
+    if (bt > 0) {
+      var b = Math.floor(bt/1000);
+      $("bc-d").textContent = Math.floor(b/86400);
+      $("bc-h").textContent = String(Math.floor(b%86400/3600)).padStart(2,"0");
+      $("bc-m").textContent = String(Math.floor(b%3600/60)).padStart(2,"0");
+      $("bc-s").textContent = String(b%60).padStart(2,"0");
+    }
+    if (ms <= 0) return;
+    var s = Math.floor(ms/1000);
+    $("cd-d").textContent = Math.floor(s/86400);
+    $("cd-h").textContent = String(Math.floor(s%86400/3600)).padStart(2,"0");
+    $("cd-m").textContent = String(Math.floor(s%3600/60)).padStart(2,"0");
+    $("cd-s").textContent = String(s%60).padStart(2,"0");
+  }
+
+  $("apple-link").href = SERIES.appleShow;
+  $("spotify-link").href = SERIES.spotifyShow;
+  var p = phase();
+  renderEpisodes(); renderPhase(p);
+  tick(); setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>

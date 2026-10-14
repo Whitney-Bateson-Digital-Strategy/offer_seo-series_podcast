@@ -22,7 +22,8 @@
 <style>
 :root{
   /* Whitney Bateson brand palette */
-  --cream:      #f5f2ec;
+  --cream:      #fffefc;   /* near-white page background */
+  --tint:       #eef4f5;   /* soft fill for boxes inside white cards */
   --pink:       #ffcdcd;
   --pink-wash:  #ffe6e6;
   --coral:      #ff7f50;
@@ -110,6 +111,12 @@ section{ padding:96px 0; }
   color:var(--coral);
   margin:0 0 1rem;
 }
+.date-line{
+  display:inline-block; margin:-.2rem 0 1.4rem;
+  font-size:.8rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--teal); background:var(--paper);
+  padding:7px 16px; border-radius:50px;
+}
 .lead{ font-size:19px; line-height:1.6; color:var(--text); }
 
 /* ---------------- buttons ---------------- */
@@ -145,6 +152,18 @@ section{ padding:96px 0; }
 .p-soon{ background:var(--pink); color:var(--teal-deep); }
 .p-closed{ background:transparent; color:var(--ink-soft); border:1px solid var(--rule); }
 .p-live{ background:var(--coral); color:#fff; }
+
+/* ---------------- top callout ---------------- */
+.topbar{ background:var(--teal-deep); color:var(--cream); padding:12px 0; }
+.topbar-row{
+  display:flex; flex-wrap:wrap; gap:.6rem 1.25rem;
+  align-items:center; justify-content:center; text-align:center;
+}
+.topbar-text{ display:flex; align-items:center; gap:.6rem; font-size:15px; font-weight:600; margin:0; }
+.topbar-text b{ color:var(--lime); }
+.topbar .dot{ width:8px; height:8px; border-radius:50%; background:var(--coral); flex-shrink:0; }
+.topbar .btn{ font-size:12px; padding:10px 20px; width:auto; }
+@media (max-width:640px){ .topbar-text{ font-size:14px; } .topbar .dot{ display:none; } }
 
 /* ---------------- hero ---------------- */
 .hero{ background:var(--teal); color:var(--cream); }
@@ -208,7 +227,7 @@ section{ padding:96px 0; }
 }
 .ec-invite{ font-size:16px; color:var(--ink-soft); margin-bottom:1.3rem; }
 .countdown{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:1.2rem; }
-.cd{ background:var(--cream); border-radius:14px; text-align:center; padding:12px 4px; }
+.cd{ background:var(--tint); border-radius:14px; text-align:center; padding:12px 4px; }
 .cd b{ display:block; font-family:var(--display); font-size:1.9rem; font-weight:700; line-height:1; color:var(--teal); font-variant-numeric:lining-nums tabular-nums; }
 .cd span{ font-size:.62rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); }
 .card .btn{ display:flex; width:100%; }
@@ -298,14 +317,14 @@ section{ padding:96px 0; }
 .ep-player iframe{ display:block; width:100%; height:190px; border:0; border-radius:14px; }
 .ep-ph{
   grid-column:1/-1; border:1.5px dashed rgba(2,82,93,.3); border-radius:14px;
-  background:var(--cream); padding:22px; text-align:center; font-size:15px; color:var(--ink-soft);
+  background:var(--tint); padding:22px; text-align:center; font-size:15px; color:var(--ink-soft);
 }
 .ep-ph b{ display:block; color:var(--teal); font-size:.75rem; letter-spacing:.09em; text-transform:uppercase; margin-bottom:4px; }
 .ep-extra{
   grid-column:1/-1;
   display:grid; grid-template-columns:auto 1fr auto; gap:16px; align-items:center;
   border-radius:16px; padding:18px 20px;
-  background:var(--cream);
+  background:var(--tint);
   border-left:4px solid var(--lime);
 }
 .ep-extra.coral{ background:var(--pink-wash); border-left-color:var(--coral); }
@@ -353,6 +372,29 @@ section{ padding:96px 0; }
 .faq details[open] summary::after{ transform:rotate(45deg); }
 .faq .a{ padding:0 26px 22px; font-size:17px; }
 
+/* ---------------- glitter divider ---------------- */
+.glitter{
+  background:var(--pink-wash);
+  padding:0 24px 72px;
+  display:flex; align-items:center; justify-content:center; gap:18px;
+}
+.glitter::before,.glitter::after{
+  content:""; flex:0 1 220px; height:1px;
+  background:linear-gradient(90deg, transparent, rgba(2,82,93,.35));
+}
+.glitter::after{ background:linear-gradient(90deg, rgba(2,82,93,.35), transparent); }
+.glitter svg{ width:240px; height:48px; overflow:visible; flex-shrink:0; }
+.glitter .sp{ transform-box:fill-box; transform-origin:center; animation:twinkle 2.4s ease-in-out infinite; }
+.glitter g:nth-child(7n+1) .sp{ animation-delay:0s; }
+.glitter g:nth-child(7n+2) .sp{ animation-delay:.35s; }
+.glitter g:nth-child(7n+3) .sp{ animation-delay:.7s; }
+.glitter g:nth-child(7n+4) .sp{ animation-delay:1.05s; }
+.glitter g:nth-child(7n+5) .sp{ animation-delay:1.4s; }
+.glitter g:nth-child(7n+6) .sp{ animation-delay:1.75s; }
+.glitter g:nth-child(7n) .sp{ animation-delay:2.1s; }
+@keyframes twinkle{ 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.35; transform:scale(.7); } }
+@media (prefers-reduced-motion:reduce){ .glitter .sp{ animation:none; } }
+
 /* ---------------- closer ---------------- */
 /* Ombre on the final CTA: lighter teal settling into the footer's dark teal. */
 .closer{
@@ -398,6 +440,12 @@ footer a:hover{ color:var(--lime); }
 <body>
 
 <main>
+
+<!-- ============ TOP CALLOUT ============ -->
+<div class="topbar"><div class="wrap topbar-row">
+  <p class="topbar-text"><span class="dot"></span><span id="tb-text">Want your website audited live? Submit it by <b>Wednesday, Oct 28 at 2 pm ET</b>.</span></p>
+  <a class="btn btn-p" href="#" data-form id="tb-btn">Submit my site</a>
+</div></div>
 
 <!-- ============ HERO ============ -->
 <section id="hero" class="hero">
@@ -477,7 +525,8 @@ footer a:hover{ color:var(--lime); }
   <div class="wrap">
     <div class="center">
       <p class="eyebrow">The series</p>
-      <h2 class="h2">4 episodes, <em>Oct 26 to Nov 2</em></h2>
+      <h2 class="h2">4 <em>episodes</em></h2>
+      <p class="date-line">Oct 26 – Nov 2</p>
       <p class="lead narrow" style="margin:0 auto">A new episode drops on The Growth Show each day, Monday through Wednesday. Then on Thursday, we tape the final episode live with you! 🎙️</p>
     </div>
     <div class="ep-list" id="ep-list"><!-- rendered by script from SERIES.episodes --></div>
@@ -537,6 +586,9 @@ footer a:hover{ color:var(--lime); }
     </div>
   </div>
 </section>
+
+<!-- ============ GLITTER DIVIDER ============ -->
+<div class="glitter" role="presentation"><svg viewBox="0 0 240 48" aria-hidden="true" focusable="false"><g transform="translate(120 24) scale(1.7)"><path class="sp" d="M0,-10 C1,-2 2,-1 10,0 C2,1 1,2 0,10 C-1,2 -2,1 -10,0 C-2,-1 -1,-2 0,-10Z" fill="#ff7f50"/></g><g transform="translate(88 15) scale(0.85)"><path class="sp" d="M0,-10 C1,-2 2,-1 10,0 C2,1 1,2 0,10 C-1,2 -2,1 -10,0 C-2,-1 -1,-2 0,-10Z" fill="#02525d"/></g><g transform="translate(152 32) scale(0.85)"><path class="sp" d="M0,-10 C1,-2 2,-1 10,0 C2,1 1,2 0,10 C-1,2 -2,1 -10,0 C-2,-1 -1,-2 0,-10Z" fill="#02525d"/></g><g transform="translate(62 30) scale(0.6)"><path class="sp" d="M0,-10 C1,-2 2,-1 10,0 C2,1 1,2 0,10 C-1,2 -2,1 -10,0 C-2,-1 -1,-2 0,-10Z" fill="#fdad8f"/></g><g transform="translate(178 14) scale(0.6)"><path class="sp" d="M0,-10 C1,-2 2,-1 10,0 C2,1 1,2 0,10 C-1,2 -2,1 -10,0 C-2,-1 -1,-2 0,-10Z" fill="#fdad8f"/></g><g transform="translate(38 18) scale(0.4)"><path class="sp" d="M0,-10 C1,-2 2,-1 10,0 C2,1 1,2 0,10 C-1,2 -2,1 -10,0 C-2,-1 -1,-2 0,-10Z" fill="#ff7f50"/></g><g transform="translate(202 30) scale(0.4)"><path class="sp" d="M0,-10 C1,-2 2,-1 10,0 C2,1 1,2 0,10 C-1,2 -2,1 -10,0 C-2,-1 -1,-2 0,-10Z" fill="#ff7f50"/></g><g transform="translate(104 40) scale(0.35)"><path class="sp" d="M0,-10 C1,-2 2,-1 10,0 C2,1 1,2 0,10 C-1,2 -2,1 -10,0 C-2,-1 -1,-2 0,-10Z" fill="#fdad8f"/></g><g transform="translate(138 7) scale(0.35)"><path class="sp" d="M0,-10 C1,-2 2,-1 10,0 C2,1 1,2 0,10 C-1,2 -2,1 -10,0 C-2,-1 -1,-2 0,-10Z" fill="#fdad8f"/></g><g transform="translate(74 10)"><circle class="sp" r="1.6" fill="#ff7f50"/></g><g transform="translate(166 40)"><circle class="sp" r="1.6" fill="#ff7f50"/></g><g transform="translate(50 38)"><circle class="sp" r="1.2" fill="#02525d"/></g><g transform="translate(192 22)"><circle class="sp" r="1.2" fill="#02525d"/></g><g transform="translate(22 26)"><circle class="sp" r="1" fill="#fdad8f"/></g><g transform="translate(218 20)"><circle class="sp" r="1" fill="#fdad8f"/></g><g transform="translate(98 30)"><circle class="sp" r="1" fill="#ff7f50"/></g><g transform="translate(144 16)"><circle class="sp" r="1" fill="#ff7f50"/></g></svg></div>
 
 <!-- ============ CLOSER ============ -->
 <section id="closing" class="closer">
@@ -669,7 +721,7 @@ var SERIES = {
     else btn = '<a class="btn btn-p btn-sm" href="' + SERIES.freebieUrl + '" target="_blank" rel="noopener">Download free</a>';
     return '<div class="ep-extra" id="freebie"><div class="ep-extra-icon">' + ICON_DL + '</div>' +
       '<div><div class="ep-extra-k">Free resource</div><h4>Score your site in 10 minutes</h4>' +
-      '<p>Matt\'s self-check for the 3 layers of SEO, so you can see where your site stands and where to focus first.</p></div>' + btn + '</div>';
+      '<p>A self-check for the 3 layers of SEO, so you can see where your site stands and where to focus first.</p></div>' + btn + '</div>';
   }
   function liveBox(){
     var p = phase(), title, body, btn;
@@ -722,6 +774,8 @@ var SERIES = {
     if (p === "open") return;
 
     // From the audit cutoff on, sign-up is for the call and questions only
+    $("tb-text").innerHTML = "Audit requests are closed, but you can still join us live <b>Thursday, Oct 29 at 2 pm ET</b>.";
+    $("tb-btn").textContent = "Save my free seat";
     $("hero-btn").textContent = "Save my free seat";
     $("cl-btn").textContent = "Save my free seat";
     $("hero-note").textContent = "Audit requests are closed, but you can still sign up and send in your questions.";
@@ -730,12 +784,17 @@ var SERIES = {
     $("ec-invite").textContent = "Everyone's invited! It's always more fun with more people in the room. 🙌";
 
     if (p === "live") {
+      $("tb-text").innerHTML = "We're <b>live on Zoom</b> right now!";
+      if (SERIES.zoomUrl) { $("tb-btn").textContent = "Join now"; $("tb-btn").href = SERIES.zoomUrl; $("tb-btn").target = "_blank"; }
+      else $("tb-btn").style.display = "none";
       $("ec-eyebrow").textContent = "Happening now";
       $("countdown").style.display = "none";
       $("ec-deadline").style.display = "none";
       if (SERIES.zoomUrl) { $("ec-btn").textContent = "Join us live"; $("ec-btn").href = SERIES.zoomUrl; $("ec-btn").target = "_blank"; }
     }
     if (p === "after") {
+      $("tb-text").innerHTML = "Missed the live taping? It airs on the podcast <b>Monday, Nov 2</b>.";
+      $("tb-btn").style.display = ""; $("tb-btn").textContent = "Listen"; $("tb-btn").href = "#episodes"; $("tb-btn").removeAttribute("target");
       $("ec-eyebrow").textContent = "That's a wrap";
       $("ec-title").textContent = "Thanks for joining us!";
       $("ec-date").textContent = "Airs Monday, Nov 2";

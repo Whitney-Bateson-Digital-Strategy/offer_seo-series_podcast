@@ -50,7 +50,7 @@
 
 *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
 
-html{ scroll-behavior:smooth; scroll-padding-top:72px; }
+html{ scroll-behavior:smooth; }
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   *{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
@@ -145,38 +145,6 @@ section{ padding:96px 0; }
 .p-soon{ background:var(--pink); color:var(--teal-deep); }
 .p-closed{ background:transparent; color:var(--ink-soft); border:1px solid var(--rule); }
 .p-live{ background:var(--coral); color:#fff; }
-
-/* ---------------- countdown bar ---------------- */
-.bar{
-  background:var(--teal-deep);
-  color:var(--cream);
-  padding:10px 0;
-  position:sticky; top:0; z-index:50;
-}
-.bar-row{
-  display:flex; flex-wrap:wrap; gap:.4rem 1.5rem;
-  align-items:center; justify-content:center;
-  text-align:center;
-}
-.bar-text{ display:flex; align-items:center; gap:.6rem; font-size:.85rem; font-weight:600; letter-spacing:.03em; }
-.bar-text b{ color:var(--lime); }
-.bar-text .dot{ width:8px; height:8px; border-radius:50%; background:var(--coral); flex-shrink:0; }
-.bar-cd{ display:flex; gap:.9rem; }
-.bar-cd div{ display:flex; flex-direction:column; align-items:center; min-width:2.6rem; }
-.bar-cd b{
-  font-family:var(--display); font-size:1.3rem; font-weight:700;
-  line-height:1; color:var(--lime);
-  font-variant-numeric:lining-nums tabular-nums;
-}
-.bar-cd span{ font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; opacity:.7; margin-top:.2rem; }
-.bar .btn{ font-size:12px; padding:10px 20px; width:auto; }
-@media (max-width:640px){ .bar-cd{ display:none; } .bar-text{ font-size:.8rem; } }
-
-/* ---------------- logo row ---------------- */
-.site-head{ background:var(--cream); padding:18px 0; }
-.logo{ display:inline-block; }
-.logo img{ height:64px; width:auto; }
-@media (max-width:540px){ .logo img{ height:52px; } }
 
 /* ---------------- hero ---------------- */
 .hero{ background:var(--teal); color:var(--cream); }
@@ -410,21 +378,6 @@ footer a:hover{ color:var(--lime); }
 </head>
 <body>
 
-<!-- ============ COUNTDOWN BAR ============ -->
-<div class="bar"><div class="wrap bar-row">
-  <div class="bar-text"><span class="dot"></span><span id="bar-text">Want your site audited live? Submit it by <b>Wednesday, October 28</b>.</span></div>
-  <div class="bar-cd" id="bar-cd" aria-label="Time left">
-    <div><b id="bc-d">--</b><span>Days</span></div><div><b id="bc-h">--</b><span>Hrs</span></div><div><b id="bc-m">--</b><span>Min</span></div><div><b id="bc-s">--</b><span>Sec</span></div>
-  </div>
-  <a class="btn btn-p" href="#" data-form id="bar-btn">Submit my site</a>
-</div></div>
-
-<div class="site-head">
-  <div class="wrap">
-    <a class="logo" href="https://whitneybateson.com/" aria-label="Whitney Bateson home"><img src="logo.png" alt="Whitney Bateson" width="358" height="200"></a>
-  </div>
-</div>
-
 <main>
 
 <!-- ============ HERO + LIVE CALL ============ -->
@@ -481,15 +434,14 @@ footer a:hover{ color:var(--lime); }
 <section id="questions">
   <div class="wrap">
     <div class="center">
-      <p class="eyebrow">What we're covering</p>
-      <h2 class="h2">Here's what we're answering <em>in this series</em></h2>
+      <h2 class="h2">What we’re <em>covering</em></h2>
     </div>
     <div class="boxes">
-      <div class="box">When your clients are searching for help online, will they <strong>find you, or someone else</strong>?</div>
-      <div class="box">When they ask ChatGPT or Claude a question, will <strong>your website be the one that gets cited</strong>?</div>
-      <div class="box">How can you be sure people <strong>keep finding your practice</strong>, even when you're not posting anything?</div>
+      <div class="box">When your ideal clients search for help online, will they <strong>find you or someone else</strong>?</div>
+      <div class="box">If they ask ChatGPT or Claude, will <strong>your website be the one it cites</strong>?</div>
+      <div class="box">And how do you <strong>stay findable</strong> on the weeks you don’t post anything?</div>
     </div>
-    <p class="fit-close">I'm joined by Matt Kuncaitus, our SEO expert, for all four episodes. And if you're not a tech person, this one's especially for you!</p>
+    <p class="fit-close">Matt Kuncaitus, our SEO expert, joins me for all four episodes. If you’re not a tech person, this series is especially for you.</p>
   </div>
 </section>
 
@@ -629,14 +581,14 @@ var SERIES = {
       desc:"What SEO actually is (quick and simple, promise!), how it's changed, and what AI means for your practice. Plus a 2-minute test you can do today to see who shows up when your dream client searches." },
     { n:2, acast:"", showNotes:"", date:"Tue, Oct 27", release:"2026-10-27T04:00:00Z",
       title:"What “Doing SEO” Actually Looks Like",
-      desc:"Matt walks through what “doing SEO” really means for your website, the 3 layers that matter, and the mistakes we see most often. This one comes with a free resource to score your own site!",
+      desc:"Matt walks through what it really means for your website, the 3 layers that matter, and the mistakes we see most often. This one comes with a free resource to score your own site.",
       extra:"freebie" },
     { n:3, acast:"", showNotes:"", date:"Wed, Oct 28", release:"2026-10-28T04:00:00Z",
       title:"Why Good SEO Still Doesn't Fill Your Calendar",
       desc:"Getting traffic but your calendar still isn't full? We're talking about the strategy mistakes we see on audits, how the approach changes for local and virtual practices, and why these problems are so hard to spot on your own site." },
-    { n:4, acast:"", showNotes:"", date:"Thu, Oct 29 · Live", release:"2026-11-02T05:00:00Z", live:true,
-      title:"We Audited Two Practice Websites Live",
-      desc:"Taped live on Zoom! We audit two real practice websites, answer your questions, and I share the new SEO services we're launching. Airs on the podcast Monday, Nov 2." }
+    { n:4, acast:"", showNotes:"", date:"Thu, Oct 29", release:"2026-11-02T05:00:00Z", live:true,
+      title:"We're Auditing Two Practice Websites Live",
+      desc:"We audit two real practice websites, answer your questions, and I share the new SEO services we're launching. Airs on the podcast Monday, Nov 2." }
   ]
 };
 /* ===================================================================== */
@@ -719,7 +671,6 @@ var SERIES = {
         if (!src) cta = '<a class="btn btn-p btn-sm" href="' + SERIES.appleShow + '" target="_blank" rel="noopener">Listen now</a>';
       } else {
         pill = '<span class="pill p-closed">Coming soon</span>';
-        cta = '<a class="btn btn-s btn-sm" aria-disabled="true">Airs ' + ep.date.split(",")[1].split("·")[0].trim() + '</a>';
       }
       if (ep.extra === "freebie") extra = freebieBox();
       if (out && src) player = '<div class="ep-player"><iframe src="' + src + '" title="Listen to Episode ' + ep.n + '" loading="lazy" allow="autoplay"></iframe></div>';
@@ -746,21 +697,14 @@ var SERIES = {
     $("cl-lead").textContent = "Save your free seat and send in your questions. See you there!";
     $("ec-deadline").textContent = "Audit requests are now closed. We've picked our 2 practices!";
     $("ec-invite").textContent = "Everyone's invited! It's always more fun with more people in the room. 🙌";
-    $("bar-text").innerHTML = "Join us live <b>Thursday, October 29 at 2 pm ET</b>.";
-    $("bar-btn").textContent = "Save my free seat";
 
     if (p === "live") {
-      $("bar-text").innerHTML = "We're <b>live on Zoom</b> right now!";
-      $("bar-btn").style.display = "none"; $("bar-cd").style.display = "none";
       $("ec-eyebrow").textContent = "Happening now";
       $("countdown").style.display = "none";
       $("ec-deadline").style.display = "none";
       if (SERIES.zoomUrl) { $("ec-btn").textContent = "Join us live"; $("ec-btn").href = SERIES.zoomUrl; $("ec-btn").target = "_blank"; }
     }
     if (p === "after") {
-      $("bar-text").innerHTML = "Missed the live taping? It airs on the podcast <b>Monday, Nov 2</b>.";
-      $("bar-cd").style.display = "none";
-      $("bar-btn").textContent = "Listen"; $("bar-btn").href = "#episodes";
       $("ec-eyebrow").textContent = "That's a wrap";
       $("ec-title").textContent = "Thanks for joining us!";
       $("ec-date").textContent = "Airs Monday, Nov 2";
@@ -781,15 +725,6 @@ var SERIES = {
     // Re-render if a cutoff passes while the page is open (e.g. audit requests closing at 2 pm Wed)
     if (phase() !== p) { p = phase(); renderEpisodes(); renderPhase(p); }
     var ms = T.start - now();
-    // The bar counts down to the audit cutoff first, then to the live call
-    var bt = (now() < T.cutoff ? T.cutoff : T.start) - now();
-    if (bt > 0) {
-      var b = Math.floor(bt/1000);
-      $("bc-d").textContent = Math.floor(b/86400);
-      $("bc-h").textContent = String(Math.floor(b%86400/3600)).padStart(2,"0");
-      $("bc-m").textContent = String(Math.floor(b%3600/60)).padStart(2,"0");
-      $("bc-s").textContent = String(b%60).padStart(2,"0");
-    }
     if (ms <= 0) return;
     var s = Math.floor(ms/1000);
     $("cd-d").textContent = Math.floor(s/86400);

@@ -173,10 +173,10 @@ section{ padding:96px 0; }
 @media (max-width:640px){ .bar-cd{ display:none; } .bar-text{ font-size:.8rem; } }
 
 /* ---------------- logo row ---------------- */
-.site-head{ background:var(--cream); padding:16px 0; }
+.site-head{ background:var(--cream); padding:18px 0; }
 .logo{ display:inline-block; }
-.logo img{ height:40px; width:auto; }
-@media (max-width:540px){ .logo img{ height:32px; } }
+.logo img{ height:64px; width:auto; }
+@media (max-width:540px){ .logo img{ height:52px; } }
 
 /* ---------------- hero ---------------- */
 .hero{ background:var(--teal); color:var(--cream); }
@@ -337,14 +337,9 @@ section{ padding:96px 0; }
   background:var(--paper); border-radius:20px; box-shadow:var(--shadow);
   padding:32px; display:flex; gap:24px; align-items:flex-start;
 }
-.host img,.host .avatar{
-  width:104px; height:104px; border-radius:50%; object-fit:cover; object-position:50% 30%;
+.host img{
+  width:104px; height:104px; border-radius:50%; object-fit:cover; object-position:50% 50%;
   flex-shrink:0; background:var(--sky); border:4px solid var(--pink);
-}
-.host .avatar{
-  background:var(--teal); color:var(--lime);
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--display); font-style:italic; font-size:2.4rem;
 }
 .host h3{ font-size:26px; color:var(--teal); margin-bottom:.15rem; }
 .host .role{ font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:.9rem; }
@@ -409,7 +404,7 @@ footer a:hover{ color:var(--lime); }
 
 <div class="site-head">
   <div class="wrap">
-    <a class="logo" href="https://whitneybateson.com/" aria-label="Whitney Bateson home"><img src="logo.png" alt="Whitney Bateson" width="200" height="60"></a>
+    <a class="logo" href="https://whitneybateson.com/" aria-label="Whitney Bateson home"><img src="logo.png" alt="Whitney Bateson" width="358" height="200"></a>
   </div>
 </div>
 
@@ -508,7 +503,7 @@ footer a:hover{ color:var(--lime); }
         </div>
       </div>
       <div class="host">
-        <div class="avatar" aria-hidden="true">MK</div>
+        <img src="matt.jpg" alt="Matt Kuncaitus" width="104" height="104" loading="lazy">
         <div>
           <h3>Matt Kuncaitus</h3>
           <div class="role">SEO expert · Team WBDS</div>

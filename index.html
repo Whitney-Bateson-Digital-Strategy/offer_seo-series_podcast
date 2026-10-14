@@ -104,7 +104,7 @@ section{ padding:96px 0; }
   display:block;
   font-family:var(--body);
   font-weight:700;
-  font-size:.75rem;
+  font-size:.8rem;
   letter-spacing:.09em;
   text-transform:uppercase;
   line-height:1.45;
@@ -134,7 +134,7 @@ section{ padding:96px 0; }
 .btn-p:hover{ color:#fff; transform:translateY(-2px); box-shadow:0 8px 24px rgba(255,127,80,.4); }
 .btn-s{ color:var(--teal); background:var(--paper); border:1.5px solid var(--teal); padding:16.5px 30px; }
 .btn-s:hover{ color:var(--teal); transform:translateY(-2px); box-shadow:var(--shadow); }
-.btn-sm{ font-size:13px; padding:12px 22px; }
+.btn-sm{ font-size:14px; padding:12px 22px; }
 .btn-s.btn-sm{ padding:10.5px 20.5px; }
 .btn[aria-disabled="true"]{
   background:transparent; color:var(--ink-soft); border:1.5px solid var(--rule);
@@ -145,7 +145,7 @@ section{ padding:96px 0; }
 /* ---------------- status pills ---------------- */
 .pill{
   display:inline-block; white-space:nowrap;
-  font-size:11px; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  font-size:12px; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
   padding:5px 12px; border-radius:50px;
 }
 .p-open{ background:var(--lime); color:var(--teal-deep); }
@@ -159,11 +159,11 @@ section{ padding:96px 0; }
   display:flex; flex-wrap:wrap; gap:.6rem 1.25rem;
   align-items:center; justify-content:center; text-align:center;
 }
-.topbar-text{ display:flex; align-items:center; gap:.6rem; font-size:15px; font-weight:600; margin:0; }
+.topbar-text{ display:flex; align-items:center; gap:.6rem; font-size:16px; font-weight:600; margin:0; }
 .topbar-text b{ color:var(--lime); }
 .topbar .dot{ width:8px; height:8px; border-radius:50%; background:var(--coral); flex-shrink:0; }
 .topbar .btn{ font-size:12px; padding:10px 20px; width:auto; }
-@media (max-width:640px){ .topbar-text{ font-size:14px; } .topbar .dot{ display:none; } }
+@media (max-width:640px){ .topbar-text{ font-size:15px; } .topbar .dot{ display:none; } }
 
 /* ---------------- hero ---------------- */
 .hero{ background:var(--teal); color:var(--cream); }
@@ -187,9 +187,14 @@ section{ padding:96px 0; }
 .hero-copy h1{ max-width:14ch; }
 .hero h1 em{ color:var(--lime); }
 .hero-body{ font-size:19px; line-height:1.6; color:rgba(255,255,255,.85); max-width:34em; margin:0 0 2rem; }
+.hero-body p{ margin:0 0 .8em; }
+.hero-body p:first-child{ font-size:21px; color:#fff; }
+.hero-ctas{ display:flex; flex-wrap:wrap; gap:12px; }
+.hero .btn-s{ background:transparent; color:#fff; border-color:rgba(255,255,255,.55); }
+.hero .btn-s:hover{ color:#fff; border-color:#fff; box-shadow:none; }
 .hero-body em{ color:var(--sky); font-style:italic; }
 .hero-body b{ color:#fff; }
-.hero-note{ font-size:15px; font-style:italic; color:var(--sky); margin-top:.9rem; }
+.hero-note{ font-size:16px; font-style:italic; color:var(--sky); margin-top:.9rem; }
 
 /* ---------------- event card ---------------- */
 .card{
@@ -201,7 +206,8 @@ section{ padding:96px 0; }
 }
 /* Event card sits under the hero copy. On desktop it splits into details
    (left) and countdown + sign-up (right); on phones it stacks. */
-#live{ background:var(--cream); padding-bottom:0; }
+#live{ background:var(--cream); }
+#live .card{ margin-top:2.4rem; }
 #live .card{ max-width:960px; margin-inline:auto; box-shadow:var(--shadow); }
 .ec-grid{ display:grid; grid-template-columns:1fr; gap:1.5rem; }
 @media (min-width:860px){
@@ -213,7 +219,7 @@ section{ padding:96px 0; }
 .ec-title{ font-size:24px; color:var(--teal); margin-bottom:.9rem; }
 .ec-when{ padding-bottom:1.1rem; margin-bottom:1.1rem; border-bottom:2px solid var(--pink); }
 .ec-date{ font-family:var(--display); font-size:clamp(28px, 2.6vw, 34px); color:var(--teal); line-height:1.1; }
-.ec-time{ font-size:15px; font-weight:700; color:var(--text); margin-top:.35rem; }
+.ec-time{ font-size:16px; font-weight:700; color:var(--text); margin-top:.35rem; }
 .ec-list{ list-style:none; display:flex; flex-direction:column; gap:.7rem; margin:0 0 1.2rem; }
 .ec-list li{ position:relative; padding-left:2.1rem; font-size:17px; line-height:1.5; }
 .ec-list li::before, .fit-list li::before{
@@ -225,13 +231,14 @@ section{ padding:96px 0; }
   font-size:12px; font-weight:700;
   display:flex; align-items:center; justify-content:center;
 }
-.ec-invite{ font-size:16px; color:var(--ink-soft); margin-bottom:1.3rem; }
+.ec-invite{ font-size:17px; color:var(--ink-soft); margin-bottom:1.3rem; }
+.cd-label{ font-size:.8rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--teal); margin:0 0 .5rem; }
 .countdown{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:1.2rem; }
 .cd{ background:var(--tint); border-radius:14px; text-align:center; padding:12px 4px; }
 .cd b{ display:block; font-family:var(--display); font-size:1.9rem; font-weight:700; line-height:1; color:var(--teal); font-variant-numeric:lining-nums tabular-nums; }
-.cd span{ font-size:.62rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); }
+.cd span{ font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); }
 .card .btn{ display:flex; width:100%; }
-.fineprint{ font-size:13px; line-height:1.5; color:var(--ink-soft); margin:.8rem 0 0; text-align:center; }
+.fineprint{ font-size:14px; line-height:1.5; color:var(--ink-soft); margin:.8rem 0 0; text-align:center; }
 
 /* ---------------- what we're covering ---------------- */
 .boxes{
@@ -267,6 +274,8 @@ section{ padding:96px 0; }
   padding-top:56px;
 }
 .ep-intro{ max-width:58ch; margin:0 auto; }
+.center .ep-h2{ max-width:22ch; }
+.show-art{ width:120px; height:120px; border-radius:18px; margin:0 auto 1.2rem; box-shadow:var(--shadow); object-fit:cover; }
 #questions{ padding-bottom:40px; }
 .ep-list{ display:flex; flex-direction:column; gap:1.25rem; max-width:860px; margin:2.6rem auto 0; }
 .ep{
@@ -282,14 +291,14 @@ section{ padding:96px 0; }
   background:var(--teal-soft);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
 }
-.ep-badge span{ font-size:.62rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); }
+.ep-badge span{ font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); }
 .ep-badge b{ font-family:var(--display); font-size:1.9rem; font-weight:700; line-height:1; color:var(--teal); font-variant-numeric:lining-nums; }
 .ep.featured .ep-badge{ background:var(--pink-wash); }
 .ep.featured .ep-badge b{ color:var(--coral); }
 .ep-meta{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:.4rem; }
-.ep-date{ font-size:.75rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--coral); }
+.ep-date{ font-size:.8rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--coral); }
 .ep h3{ font-size:24px; color:var(--teal); margin-bottom:.4rem; }
-.ep p{ font-size:16.5px; color:var(--text); line-height:1.6; }
+.ep p{ font-size:17px; color:var(--text); line-height:1.6; }
 .ep-cta{ display:flex; flex-direction:column; gap:8px; align-items:stretch; min-width:150px; align-self:center; }
 .ep-cta:empty{ display:none; }
 .ep-links{ display:flex; gap:16px; flex-wrap:wrap; font-size:15px; font-weight:700; margin-top:.7rem; }
@@ -309,17 +318,26 @@ section{ padding:96px 0; }
 .ep-extra{
   grid-column:1/-1;
   display:grid; grid-template-columns:auto 1fr auto; gap:16px; align-items:center;
-  border-radius:16px; padding:18px 20px;
+  border-radius:16px; padding:20px 22px;
   background:var(--tint);
   border-left:4px solid var(--lime);
 }
 .ep-extra.coral{ background:var(--pink-wash); border-left-color:var(--coral); }
+.ep-extra.bonus{ background:#f6fbdf; border:2px solid var(--lime); border-left-width:6px; }
+.ep-extra.bonus .ep-extra-icon{ background:var(--lime); }
+.ep-extra.bonus h4{ font-size:23px; }
 .ep-extra-icon{ width:42px; height:42px; border-radius:50%; background:var(--paper); display:flex; align-items:center; justify-content:center; }
 .ep-extra-icon svg{ width:20px; height:20px; fill:none; stroke:var(--teal); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
 .ep-extra.coral .ep-extra-icon svg{ stroke:var(--coral); }
-.ep-extra-k{ font-size:.7rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--coral); }
+.ep-extra-k{ font-size:.75rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--coral); }
 .ep-extra h4{ font-size:20px; color:var(--teal); margin:2px 0 3px; }
-.ep-extra p{ font-size:15px; color:var(--ink-soft); line-height:1.5; }
+.ep-extra p{ font-size:16px; color:var(--ink-soft); line-height:1.5; }
+/* Phones: badge becomes a small inline tag so the text gets the full card width */
+@media (max-width:640px){
+  .ep{ grid-template-columns:1fr; gap:12px; padding:22px 20px; }
+  .ep-badge{ width:auto; height:auto; flex-direction:row; gap:6px; justify-self:start; padding:5px 12px; border-radius:50px; }
+  .ep-badge b{ font-size:1.1rem; }
+}
 /* On desktop, inner boxes line up with the episode text, not the badge */
 @media (min-width:821px){ .ep-extra, .ep-player, .ep-ph{ grid-column:2 / -1; } }
 @media (max-width:640px){ .ep-extra{ grid-template-columns:1fr; } .ep-extra-icon{ display:none; } }
@@ -339,8 +357,8 @@ section{ padding:96px 0; }
   flex-shrink:0; background:var(--sky); border:4px solid var(--pink);
 }
 .host h3{ font-size:26px; color:var(--teal); margin-bottom:.15rem; }
-.host .role{ font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:.9rem; }
-.host p{ font-size:16.5px; line-height:1.6; }
+.host .role{ font-size:.8rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:.9rem; }
+.host p{ font-size:17px; line-height:1.6; }
 @media (max-width:480px){ .host{ flex-direction:column; padding:26px 24px; } }
 
 /* ---------------- faq ---------------- */
@@ -417,7 +435,7 @@ section{ padding:96px 0; }
 /* ---------------- footer ---------------- */
 footer{
   background:var(--teal-deep); color:var(--sky);
-  font-size:13px; text-align:center;
+  font-size:14px; text-align:center;
   padding:28px 0;
   border-top:1px solid rgba(255,255,255,.1);
 }
@@ -441,11 +459,19 @@ footer a:hover{ color:var(--lime); }
 <section id="hero" class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">Podcast series + live audit call for health &amp; nutrition practitioners</p>
+      <p class="eyebrow">A free 4-part series on The Growth Show</p>
       <h1>Getting found online <em>in the age of AI</em></h1>
-      <p class="hero-body">When someone searches <em>“dietitian for IBS who offers virtual visits”</em> on Google, or asks ChatGPT the same thing… does your practice come up? We're breaking down <b>what's changed with SEO</b> (and what still matters) in a 4-part podcast series. Then we're <b>auditing two practice websites live</b>, and you're invited!</p>
-      <a class="btn btn-p" href="#" data-form id="hero-btn">Save my free seat &amp; submit my site</a>
-      <p class="hero-note" id="hero-note">Submitting your site for an audit is optional when you sign up.</p>
+      <div class="hero-body">
+        <p>You know people are searching for the kind of care you provide. But is your website actually showing up?</p>
+        <p>Between Google, ChatGPT, and all the changes happening with SEO, it’s hard to know what matters anymore.</p>
+        <p>Join Whitney and SEO expert Matt Kuncaitus for a <b>free, four-part podcast series</b> where we’re breaking down what’s changed, what still works, and how to make sure the right people can find your practice.</p>
+        <p>Plus, we’re wrapping things up with a <b>live website audit and Q&amp;A</b>!</p>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-p" href="#" data-form id="hero-btn">Save my seat for the finale</a>
+        <a class="btn btn-s" href="#episodes" id="hero-btn2">See the episodes</a>
+      </div>
+      <p class="hero-note" id="hero-note">Anyone can join the live finale. Submitting your site for an audit is optional.</p>
     </div>
     <div class="hero-photo">
       <img src="hero.jpg" alt="Hands typing on a laptop" width="960" height="1440" fetchpriority="high">
@@ -453,9 +479,47 @@ footer a:hover{ color:var(--lime); }
   </div>
 </section>
 
+<!-- ============ WHAT WE'RE COVERING ============ -->
+<section id="questions">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">What we’re covering</p>
+      <h2 class="h2">SEO has changed. <em>Here’s what that means for your practice.</em></h2>
+    </div>
+    <div class="boxes">
+      <div class="box">When your ideal clients search for help online, will they <strong>find you or someone else</strong>?</div>
+      <div class="box">If they ask ChatGPT or Claude, will <strong>your website be the one it cites</strong>?</div>
+      <div class="box">And how do you <strong>stay findable</strong> on the weeks you don’t post anything?</div>
+    </div>
+    <p class="fit-close">Matt Kuncaitus, our SEO expert, joins me for all four episodes. If you’re not a tech person, this series is especially for you.</p>
+  </div>
+</section>
+
+<!-- ============ EPISODES ============ -->
+<section id="episodes">
+  <div class="wrap">
+    <div class="center">
+      <!-- The Growth Show cover art: drop growth-show.jpg in next to index.html and it appears here -->
+      <img class="show-art" src="growth-show.jpg" alt="The Growth Show with Whitney Bateson" width="120" height="120" onerror="this.remove()">
+      <p class="date-line">Oct 26 – Nov 2</p>
+      <h2 class="h2 ep-h2">Four days. Four conversations. <em>A whole lot more clarity about SEO.</em></h2>
+      <p class="lead ep-intro">A new episode drops on The Growth Show each day, Monday through Wednesday. Then on Thursday, we tape the final episode live with you! 🎙️</p>
+    </div>
+    <div class="ep-list" id="ep-list"><!-- rendered by script from SERIES.episodes --></div>
+    <div class="listen-row">
+      <a class="btn btn-s btn-sm" id="apple-link" href="#" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><linearGradient id="apg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F452FF"/><stop offset="1" stop-color="#832BC1"/></linearGradient></defs><rect width="24" height="24" rx="5.5" fill="url(#apg)"/><g fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><path d="M7.6 15.6a6.2 6.2 0 1 1 8.8 0"/><path d="M9.6 13.4a3.3 3.3 0 1 1 4.8 0"/></g><circle cx="12" cy="10.6" r="1.6" fill="#fff"/><path d="M11 13.4h2l-.35 5.3h-1.3z" fill="#fff"/></svg>Listen on Apple</a>
+      <a class="btn btn-s btn-sm" id="spotify-link" href="#" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#1DB954" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Listen on Spotify</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ LIVE CALL ============ -->
 <section id="live">
   <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Thursday’s live finale</p>
+      <h2 class="h2">See everything from the series <em>put into practice</em></h2>
+    </div>
     <aside class="card" aria-labelledby="ec-title">
      <div class="ec-grid">
       <div class="ec-info">
@@ -473,7 +537,8 @@ footer a:hover{ color:var(--lime); }
       </div>
       <div class="ec-action">
       <p class="ec-invite" id="ec-invite">Everyone's invited, even if you don't want an audit! It's always more fun with more people in the room. 🙌</p>
-      <div class="countdown" id="countdown" aria-label="Time until the live taping">
+      <p class="cd-label" id="cd-label">Audit requests close in</p>
+      <div class="countdown" id="countdown" aria-label="Time until audit requests close">
         <div class="cd"><b id="cd-d">--</b><span>Days</span></div>
         <div class="cd"><b id="cd-h">--</b><span>Hours</span></div>
         <div class="cd"><b id="cd-m">--</b><span>Mins</span></div>
@@ -484,37 +549,6 @@ footer a:hover{ color:var(--lime); }
       </div>
      </div>
     </aside>
-  </div>
-</section>
-
-<!-- ============ WHAT WE'RE COVERING ============ -->
-<section id="questions">
-  <div class="wrap">
-    <div class="center">
-      <h2 class="h2">What we’re <em>covering</em></h2>
-    </div>
-    <div class="boxes">
-      <div class="box">When your ideal clients search for help online, will they <strong>find you or someone else</strong>?</div>
-      <div class="box">If they ask ChatGPT or Claude, will <strong>your website be the one it cites</strong>?</div>
-      <div class="box">And how do you <strong>stay findable</strong> on the weeks you don’t post anything?</div>
-    </div>
-    <p class="fit-close">Matt Kuncaitus, our SEO expert, joins me for all four episodes. If you’re not a tech person, this series is especially for you.</p>
-  </div>
-</section>
-
-<!-- ============ EPISODES ============ -->
-<section id="episodes">
-  <div class="wrap">
-    <div class="center">
-      <p class="date-line">Oct 26 – Nov 2</p>
-      <h2 class="h2">4 <em>episodes</em></h2>
-      <p class="lead ep-intro">A new episode drops on The Growth Show each day, Monday through Wednesday. Then on Thursday, we tape the final episode live with you! 🎙️</p>
-    </div>
-    <div class="ep-list" id="ep-list"><!-- rendered by script from SERIES.episodes --></div>
-    <div class="listen-row">
-      <a class="btn btn-s btn-sm" id="apple-link" href="#" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><linearGradient id="apg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F452FF"/><stop offset="1" stop-color="#832BC1"/></linearGradient></defs><rect width="24" height="24" rx="5.5" fill="url(#apg)"/><g fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><path d="M7.6 15.6a6.2 6.2 0 1 1 8.8 0"/><path d="M9.6 13.4a3.3 3.3 0 1 1 4.8 0"/></g><circle cx="12" cy="10.6" r="1.6" fill="#fff"/><path d="M11 13.4h2l-.35 5.3h-1.3z" fill="#fff"/></svg>Listen on Apple</a>
-      <a class="btn btn-s btn-sm" id="spotify-link" href="#" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#1DB954" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Listen on Spotify</a>
-    </div>
   </div>
 </section>
 
@@ -554,6 +588,7 @@ footer a:hover{ color:var(--lime); }
     </div>
     <div class="faq">
       <div class="faq-col">
+        <details><summary>Do I need to register to listen to the podcast?</summary><div class="a">Nope! All four episodes are free on Apple Podcasts, Spotify, or wherever you listen. Signing up is only for the live finale on Thursday.</div></details>
         <details><summary>Do I need to be techy to get something out of this?</summary><div class="a">Not at all! This series is made for practitioners who aren't technical. We keep it simple and skip the jargon.</div></details>
         <details><summary>Is this for local or virtual practices?</summary><div class="a">Both! In Episode 3, we get into how your strategy changes depending on which one you are, and on the live call we're auditing one of each.</div></details>
         <details><summary>Is the live call free?</summary><div class="a">Yep, it's totally free.</div></details>
@@ -578,10 +613,10 @@ footer a:hover{ color:var(--lime); }
   </video>
   <div class="wrap">
     <p class="eyebrow" id="cl-eyebrow">See you Thursday, Oct 29 at 2 pm ET</p>
-    <p class="script">Ready to get found by more of the right clients?</p>
-    <h2>Save your seat for the <em>live taping</em></h2>
-    <p class="sub" id="cl-lead">Save your free seat, send in your questions, and submit your site for a chance at a live audit. See you there!</p>
-    <a class="btn btn-p" href="#" data-form id="cl-btn">Save my free seat &amp; submit my site</a>
+    <p class="script">The grand finale</p>
+    <h2 id="cl-h2">Watch us audit two real practice websites <em>live</em></h2>
+    <p class="sub" id="cl-lead">Bring your questions, see everything from the series put into practice, and get a first look at our new SEO services. Anyone can join, and submitting your site for a chance at an audit is totally optional.</p>
+    <a class="btn btn-p" href="#" data-form id="cl-btn">Save my seat for the finale</a>
   </div>
 </section>
 
@@ -699,8 +734,8 @@ var SERIES = {
     if (now() < T.fb) btn = '<a class="btn btn-s btn-sm" aria-disabled="true">Unlocks Tue, Oct 27</a>';
     else if (!SERIES.freebieUrl) btn = '<a class="btn btn-s btn-sm" aria-disabled="true">Coming soon</a>';
     else btn = '<a class="btn btn-p btn-sm" href="' + SERIES.freebieUrl + '" target="_blank" rel="noopener">Download free</a>';
-    return '<div class="ep-extra" id="freebie"><div class="ep-extra-icon">' + ICON_DL + '</div>' +
-      '<div><div class="ep-extra-k">Free resource</div><h4>Score your site in 10 minutes</h4>' +
+    return '<div class="ep-extra bonus" id="freebie"><div class="ep-extra-icon">' + ICON_DL + '</div>' +
+      '<div><div class="ep-extra-k">Free resource · comes with Episode 2</div><h4>Score your site in 10 minutes</h4>' +
       '<p>A self-check for the 3 layers of SEO, so you can see where your site stands and where to focus first.</p></div>' + btn + '</div>';
   }
   function liveBox(){
@@ -727,7 +762,7 @@ var SERIES = {
         var p = phase();
         pill = p === "live" ? '<span class="pill p-live">Live now</span>'
              : p === "after" ? '<span class="pill p-soon">Airs Mon, Nov 2</span>'
-             : '<span class="pill p-soon">Live on Zoom</span>';
+             : '<span class="pill p-soon">The live finale</span>';
         if (p !== "after") extra = liveBox();
       } else if (out) {
         pill = '<span class="pill p-open">' + (ep.live ? 'Replay out now' : 'Out now') + '</span>';
@@ -756,10 +791,10 @@ var SERIES = {
     // From the audit cutoff on, sign-up is for the call and questions only
     $("tb-text").innerHTML = "Audit requests are closed, but you can still join us live <b>Thursday, Oct 29 at 2 pm ET</b>.";
     $("tb-btn").textContent = "Save my free seat";
-    $("hero-btn").textContent = "Save my free seat";
-    $("cl-btn").textContent = "Save my free seat";
-    $("hero-note").textContent = "Audit requests are closed, but you can still sign up and send in your questions.";
-    $("cl-lead").textContent = "Save your free seat and send in your questions. See you there!";
+    $("hero-btn").textContent = "Save my seat for the finale";
+    $("cl-btn").textContent = "Save my seat for the finale";
+    $("hero-note").textContent = "Audit requests are closed, but anyone can still join the live finale and send in questions.";
+    $("cl-lead").textContent = "Audit requests are closed, but anyone can still join us live. Bring your questions, and see everything from the series put into practice.";
     $("ec-deadline").textContent = "Audit requests are now closed. We've picked our 2 practices!";
     $("ec-invite").textContent = "Everyone's invited! It's always more fun with more people in the room. 🙌";
 
@@ -768,7 +803,7 @@ var SERIES = {
       if (SERIES.zoomUrl) { $("tb-btn").textContent = "Join now"; $("tb-btn").href = SERIES.zoomUrl; $("tb-btn").target = "_blank"; }
       else $("tb-btn").style.display = "none";
       $("ec-eyebrow").textContent = "Happening now";
-      $("countdown").style.display = "none";
+      $("countdown").style.display = "none"; $("cd-label").style.display = "none";
       $("ec-deadline").style.display = "none";
       if (SERIES.zoomUrl) { $("ec-btn").textContent = "Join us live"; $("ec-btn").href = SERIES.zoomUrl; $("ec-btn").target = "_blank"; }
     }
@@ -779,13 +814,15 @@ var SERIES = {
       $("ec-title").textContent = "Thanks for joining us!";
       $("ec-date").textContent = "Airs Monday, Nov 2";
       $("ec-time").textContent = "The full taping, on The Growth Show";
-      ["ec-list","ec-invite","countdown","ec-deadline"].forEach(function(id){ $(id).style.display = "none"; });
+      ["ec-list","ec-invite","countdown","cd-label","ec-deadline"].forEach(function(id){ $(id).style.display = "none"; });
       document.querySelector(".ec-when").style.borderBottom = "0";
       [["hero-btn","Listen to the series"],["ec-btn","Listen to the series"],["cl-btn","Listen to the series"]].forEach(function(x){
         $(x[0]).textContent = x[1]; $(x[0]).href = "#episodes"; $(x[0]).removeAttribute("target");
       });
       $("hero-note").textContent = "Catch all four episodes on The Growth Show.";
       $("cl-eyebrow").textContent = "Getting Found Online in the Age of AI";
+      $("cl-h2").innerHTML = "Catch the finale <em>on the podcast</em>";
+      $("hero-btn2").style.display = "none";
       $("cl-lead").textContent = "Catch all four episodes on The Growth Show.";
     }
   }
@@ -794,7 +831,10 @@ var SERIES = {
   function tick(){
     // Re-render if a cutoff passes while the page is open (e.g. audit requests closing at 2 pm Wed)
     if (phase() !== p) { p = phase(); renderEpisodes(); renderPhase(p); }
-    var ms = T.start - now();
+    // Counts down to the audit deadline first, then to the live taping
+    var before = now() < T.cutoff, ms = (before ? T.cutoff : T.start) - now();
+    $("cd-label").textContent = before ? "Audit requests close in" : "Live taping starts in";
+    $("countdown").setAttribute("aria-label", before ? "Time until audit requests close" : "Time until the live taping");
     if (ms <= 0) return;
     var s = Math.floor(ms/1000);
     $("cd-d").textContent = Math.floor(s/86400);

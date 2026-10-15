@@ -4,7 +4,7 @@ name: Deploy to SiteGround
 on:
   push:
     branches:
-      - main
+      - claude/practical-davinci-899btu
 
 jobs:
   deploy:

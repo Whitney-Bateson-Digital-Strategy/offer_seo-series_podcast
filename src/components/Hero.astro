@@ -24,13 +24,14 @@
       <p class="hero-note" id="hero-note">The live finale is open to everyone. Submitting your website for an audit is optional.</p>
     </div>
 
-    <img
-  src={`${import.meta.env.BASE_URL}/hero.jpg`}
-  alt="Hands typing on a laptop"
-  width="960"
-  height="1440"
-  fetchpriority="high"
-/>
+    <div class="hero-photo">
+      <img
+        src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/hero.jpg`}
+        alt="Hands typing on a laptop"
+        width="960"
+        height="1440"
+        fetchpriority="high"
+      />
     </div>
   </div>
 </section>

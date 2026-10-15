@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TopBar from "../components/TopBar.astro";
+import Hero from "../components/Hero.astro";
+import Questions from "../components/Questions.astro";
+import Episodes from "../components/Episodes.astro";
+import LiveCall from "../components/LiveCall.astro";
+import Hosts from "../components/Hosts.astro";
+import Faq from "../components/Faq.astro";
+import GlitterDivider from "../components/GlitterDivider.astro";
+import Closer from "../components/Closer.astro";
+import Footer from "../components/Footer.astro";
+---
+<Layout>
+  <main>
+    <TopBar />
+    <Hero />
+    <Questions />
+    <Episodes />
+    <LiveCall />
+    <Hosts />
+    <Faq />
+    <GlitterDivider />
+    <Closer />
+  </main>
+  <Footer />
+  <div class="preview-flag" id="preview-flag"></div>
+  <script src="../scripts/page.ts"></script>
+</Layout>

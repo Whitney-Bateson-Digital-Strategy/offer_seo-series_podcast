@@ -68,16 +68,16 @@ export const SERIES: Series = {
   episodes: [
     { n:1, acast:"", showNotes:"", date:"Mon, Oct 26", release:"2026-10-26T04:00:00Z",
       title:"The Truth About SEO in the AI Age",
-      desc:"What SEO actually is (quick and simple, promise!), how it's changed, and what AI means for your practice. Plus a 2-minute test you can do today to see who shows up when your dream client searches." },
+      desc:"What SEO actually is (quick and simple, promise!), how it's changed, and what AI means for how clients find your practice." },
     { n:2, acast:"", showNotes:"", date:"Tue, Oct 27", release:"2026-10-27T04:00:00Z",
       title:"What “Doing SEO” Actually Looks Like",
       desc:"Matt walks through what it really means for your website, the 3 layers that matter, and the mistakes we see most often. This one comes with a free resource to score your own site.",
       extra:"freebie" },
     { n:3, acast:"", showNotes:"", date:"Wed, Oct 28", release:"2026-10-28T04:00:00Z",
-      title:"Why Good SEO Still Doesn't Fill Your Calendar",
+      title:"Why Good SEO Still Doesn't Fill Your Calendar (and What To Do About It)",
       desc:"Getting traffic but your calendar still isn't full? We're talking about the strategy mistakes we see on audits, how the approach changes for local and virtual practices, and why these problems are so hard to spot on your own site." },
     { n:4, acast:"", showNotes:"", date:"Thu, Oct 29", release:"2026-11-02T05:00:00Z", live:true,
-      title:"We're Auditing Two Practice Websites Live",
-      desc:"We audit two real practice websites, answer your questions, and I share the new SEO services we're launching. Airs on the podcast Monday, Nov 2." }
+      title:"We're Auditing Two Practice Websites Live, Taking Your Questions, and Unveiling Our New SEO Services",
+      desc:"Ever wondered what an SEO expert actually looks for? Pull up a chair while Matt walks through two real practice websites and shows what he'd fix first and why. Bring your questions and leave with ideas you can try on your own site right away. Airs on the podcast Monday, Nov 2." }
   ]
 };

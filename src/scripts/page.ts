@@ -23,7 +23,11 @@ function render() {
 
 /* ---------- Phase-dependent copy ---------- */
 function renderPhase(p: Phase) {
-  document.querySelectorAll<HTMLAnchorElement>("[data-form]").forEach((a) => { a.href = formUrl(now()); });
+  document.querySelectorAll<HTMLAnchorElement>("[data-form]").forEach((a) => {
+    a.href = formUrl(now());
+    // Open the form in a new tab so the page stays open behind it
+    if (a.getAttribute("href") !== "#") { a.target = "_blank"; a.rel = "noopener"; }
+  });
   if (p === "open") return;
 
   // From the audit cutoff on, sign-up is for the call and questions only

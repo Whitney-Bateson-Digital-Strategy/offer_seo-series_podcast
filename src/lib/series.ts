@@ -53,7 +53,7 @@ function liveBox(n: Date): string {
     title = "Join us live on Thursday, Oct 29 at 2 pm ET";
     body = p === "open" ? "Save your seat, send in your SEO questions, and opt in for a chance at a live audit."
                         : "Save your seat and send in your SEO questions. We'll answer them live!";
-    btn = '<a class="btn btn-p btn-sm" href="' + formUrl(n) + '">Save my free seat</a>';
+    btn = '<a class="btn btn-p btn-sm" href="' + formUrl(n) + '"' + (formUrl(n) !== "#" ? ' target="_blank" rel="noopener"' : '') + '>Save my free seat</a>';
   }
   return '<div class="ep-extra coral"><div class="ep-extra-icon">' + ICON_CAL + '</div>' +
     '<div><div class="ep-extra-k">Live taping</div><h4>' + title + '</h4><p>' + body + '</p></div>' + btn + '</div>';

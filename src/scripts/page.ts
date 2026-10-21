@@ -23,17 +23,21 @@ function render() {
 
 /* ---------- Phase-dependent copy ---------- */
 function renderPhase(p: Phase) {
-  document.querySelectorAll<HTMLAnchorElement>("[data-form]").forEach((a) => { a.href = formUrl(now()); });
+  document.querySelectorAll<HTMLAnchorElement>("[data-form]").forEach((a) => {
+    a.href = formUrl(now());
+    // Open the form in a new tab so the page stays open behind it
+    if (a.getAttribute("href") !== "#") { a.target = "_blank"; a.rel = "noopener"; }
+  });
   if (p === "open") return;
 
-  // From the audit cutoff on, sign-up is for the call and questions only
-  $("tb-text").innerHTML = "Audit requests are closed, but you can still join us live <b>Thursday, Oct 29 at 2 pm ET</b>.";
+  // From the audit cutoff on, sign-up is for the call and questions only, so drop every audit-request mention
+  $("tb-text").innerHTML = "Join us live <b>Thursday, Oct 29 at 2 pm ET</b> and send in your SEO questions!";
   $("tb-btn").textContent = "Save my free seat";
   $("hero-btn").textContent = "Save my seat for the live audit";
   $("cl-btn").textContent = "Save my seat for the live audit";
-  $("hero-note").textContent = "Audit requests are closed, but the live finale is still open to everyone. Send in your questions!";
-  $("cl-lead").textContent = "Audit requests are closed, but anyone can still join. We'll point out what we'd fix first on each site and answer your questions live.";
-  $("ec-deadline").textContent = "Audit requests are now closed. We've picked our 2 practices!";
+  $("hero-note").textContent = "The live finale is free and open to everyone. Send in your questions!";
+  $("cl-lead").textContent = "We'll point out what we'd fix first on each site, answer your questions, and give you a first look at our new SEO services. Anyone can join!";
+  ["ec-deadline", "faq-submit", "faq-pick"].forEach((id) => { $(id).style.display = "none"; });
   $("ec-invite").textContent = "Everyone's invited! It's always more fun with more people in the room. 🙌";
 
   if (p === "live") {

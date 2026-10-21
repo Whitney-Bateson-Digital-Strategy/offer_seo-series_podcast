@@ -1,5 +1,5 @@
 import { SERIES } from "../data/series";
-import { T, phase, formUrl, renderEpisodes, type Phase } from "../lib/series";
+import { T, phase, formUrl, formEmbedUrl, renderEpisodes, type Phase } from "../lib/series";
 
 // ?preview=2026-10-28T15:00 (ET) shows the page as it will look at that time.
 // ?placeholders=1 shows where each episode player will sit.
@@ -28,6 +28,11 @@ function renderPhase(p: Phase) {
     // Open the form in a new tab so the page stays open behind it
     if (a.getAttribute("href") !== "#") { a.target = "_blank"; a.rel = "noopener"; }
   });
+  // Only reassign the src when it actually changes, so a phase passing mid-visit
+  // doesn't reload the embedded form out from under someone filling it in
+  const iframe = document.getElementById("cl-iframe") as HTMLIFrameElement | null;
+  const embed = formEmbedUrl(now());
+  if (iframe && embed && iframe.getAttribute("src") !== embed) iframe.src = embed;
   if (p === "open") return;
 
   // From the audit cutoff on, sign-up is for the call and questions only, so drop every audit-request mention
@@ -66,6 +71,9 @@ function renderPhase(p: Phase) {
     $("cl-h2").innerHTML = "Catch the finale <em>on the podcast</em>";
     $("hero-btn2").style.display = "none";
     $("cl-lead").textContent = "Catch all four episodes on The Growth Show.";
+    // Sign-up is closed, so the embedded form comes down and the button takes its place
+    const clForm = document.getElementById("cl-form");
+    if (clForm) { clForm.style.display = "none"; $("cl-btn").style.display = ""; }
   }
 }
 

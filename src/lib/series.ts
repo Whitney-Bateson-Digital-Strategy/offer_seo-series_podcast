@@ -22,6 +22,11 @@ export function formUrl(n: Date): string {
   return (phase(n) !== "open" && SERIES.airtableFormUrlAfterCutoff) || SERIES.airtableFormUrl || "#";
 }
 
+// The embedded version of the same form, for the closing section.
+export function formEmbedUrl(n: Date): string {
+  return (phase(n) !== "open" && SERIES.airtableEmbedUrlAfterCutoff) || SERIES.airtableEmbedUrl || "";
+}
+
 /* ---------- Episodes ---------- */
 const ICON_DL = '<svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
 const ICON_CAL = '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>';

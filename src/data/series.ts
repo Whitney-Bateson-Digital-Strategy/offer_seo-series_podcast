@@ -13,6 +13,8 @@ export interface Episode {
 export interface Series {
   airtableFormUrl: string;
   airtableFormUrlAfterCutoff: string;
+  airtableEmbedUrl: string;
+  airtableEmbedUrlAfterCutoff: string;
   freebieUrl: string;
   freebieUnlock: string;
   auditCutoff: string;
@@ -38,6 +40,13 @@ export const SERIES: Series = {
   // switches to it automatically at the audit cutoff (Wed Oct 28, 2 pm ET), so nobody has
   // to edit the live form at 2 pm. Leave "" to keep using the form above.
   airtableFormUrlAfterCutoff: "",
+
+  // The same form, embedded in the closing section instead of a button. In Airtable this is
+  // the "Embed this form" link, e.g. "https://airtable.com/embed/appXXXX/pagXXXX/form" —
+  // note the /embed/ in the path. Leave "" to show the button again instead of the form.
+  airtableEmbedUrl: "https://airtable.com/embed/app8n2l2G7IWv4Z4g/pagIvoUbhwjL1Lmz3/form",
+  // Embed link for the after-cutoff form above. Only needed if airtableFormUrlAfterCutoff is set.
+  airtableEmbedUrlAfterCutoff: "",
 
   // Per episode (in episodes below): paste the Acast episode ID (or the full
   // embed URL) into acast, and the episode's blog post URL into showNotes.

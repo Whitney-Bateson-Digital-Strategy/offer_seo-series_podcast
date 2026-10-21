@@ -33,7 +33,7 @@ export interface Series {
 export const SERIES: Series = {
   // Airtable form share link, e.g. "https://airtable.com/appXXXXXXXXXXXXXX/shrXXXXXXXXXXXXXX".
   // Every sign-up button on the page (and the Episode 4 callout) opens it. Leave "" until it's ready.
-  airtableFormUrl: "",
+  airtableFormUrl: "https://airtable.com/app8n2l2G7IWv4Z4g/pagIvoUbhwjL1Lmz3/form",
   // Optional: a second version of the form WITHOUT the audit question. If set, the page
   // switches to it automatically at the audit cutoff (Wed Oct 28, 2 pm ET), so nobody has
   // to edit the live form at 2 pm. Leave "" to keep using the form above.

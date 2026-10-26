@@ -46,7 +46,7 @@ export const SERIES: Series = {
 
   // Freebie (Episode 2). Shows as a download box inside the Episode 2 card.
   // The button stays locked until freebieUnlock.
-  freebieUrl: "",
+  freebieUrl: "https://whitneybateson.kit.com/3c99e9c670",
   freebieUnlock: "2026-10-27T09:00:00Z",        // Tue Oct 27, 5 am ET
 
   auditCutoff:  "2026-10-28T18:00:00Z",          // Wed Oct 28, 2 pm ET

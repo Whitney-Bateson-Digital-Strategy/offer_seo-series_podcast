@@ -66,7 +66,7 @@ export const SERIES: Series = {
   spotifyShow: "https://open.spotify.com/show/7EN6VaQaH8Kb1wfEc5Ahvo",
 
   episodes: [
-    { n:1, acast:"", showNotes:"", date:"Mon, Oct 26", release:"2026-10-26T04:00:00Z",
+    { n:1, acast:"6adaaf825de627c540ab43af", showNotes:"", date:"Mon, Oct 26", release:"2026-10-26T09:00:00Z", // 5 am ET
       title:"The Truth About SEO in the AI Age",
       desc:"What SEO actually is (quick and simple, promise!), how it's changed, and what AI means for how clients find your practice." },
     { n:2, acast:"", showNotes:"", date:"Tue, Oct 27", release:"2026-10-27T04:00:00Z",

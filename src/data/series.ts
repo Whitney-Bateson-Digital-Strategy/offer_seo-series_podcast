@@ -46,8 +46,8 @@ export const SERIES: Series = {
 
   // Freebie (Episode 2). Shows as a download box inside the Episode 2 card.
   // The button stays locked until freebieUnlock.
-  freebieUrl: "",
-  freebieUnlock: "2026-10-27T04:00:00Z",        // Tue Oct 27, 12 am ET
+  freebieUrl: "https://whitneybateson.kit.com/3c99e9c670",
+  freebieUnlock: "2026-10-27T09:00:00Z",        // Tue Oct 27, 5 am ET
 
   auditCutoff:  "2026-10-28T18:00:00Z",          // Wed Oct 28, 2 pm ET
   liveStart:    "2026-10-29T18:00:00Z",          // Thu Oct 29, 2 pm ET
@@ -73,7 +73,7 @@ export const SERIES: Series = {
       title:"What “Doing SEO” Actually Looks Like",
       desc:"Matt walks through what it really means for your website, the 3 layers that matter, and the mistakes we see most often. This one comes with a free resource to score your own site.",
       extra:"freebie" },
-    { n:3, acast:"", showNotes:"", date:"Wed, Oct 28", release:"2026-10-28T04:00:00Z",
+    { n:3, acast:"6adf623b677cf6f87d73b892", showNotes:"", date:"Wed, Oct 28", release:"2026-10-28T09:00:00Z", // 5 am ET
       title:"Why Good SEO Still Doesn't Fill Your Calendar (and What To Do About It)",
       desc:"Getting traffic but your calendar still isn't full? We're talking about the strategy mistakes we see on audits, how the approach changes for local and virtual practices, and why these problems are so hard to spot on your own site." },
     { n:4, acast:"", showNotes:"", date:"Thu, Oct 29", release:"2026-11-02T05:00:00Z", live:true,

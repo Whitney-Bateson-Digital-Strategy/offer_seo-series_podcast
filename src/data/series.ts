@@ -69,7 +69,7 @@ export const SERIES: Series = {
     { n:1, acast:"6adaaf825de627c540ab43af", showNotes:"", date:"Mon, Oct 26", release:"2026-10-26T09:00:00Z", // 5 am ET
       title:"The Truth About SEO in the AI Age",
       desc:"What SEO actually is (quick and simple, promise!), how it's changed, and what AI means for how clients find your practice." },
-    { n:2, acast:"", showNotes:"", date:"Tue, Oct 27", release:"2026-10-27T04:00:00Z",
+    { n:2, acast:"6adc17af02b9e3b25928af55", showNotes:"", date:"Tue, Oct 27", release:"2026-10-27T09:00:00Z", // 5 am ET
       title:"What “Doing SEO” Actually Looks Like",
       desc:"Matt walks through what it really means for your website, the 3 layers that matter, and the mistakes we see most often. This one comes with a free resource to score your own site.",
       extra:"freebie" },

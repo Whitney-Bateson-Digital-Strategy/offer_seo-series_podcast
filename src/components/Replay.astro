@@ -1,0 +1,7 @@
+---
+import { replayOut, renderReplay } from "../lib/series";
+// Hidden until SERIES.replayRelease. If the site is built before then, the page script
+// fills this in once the release time passes (no redeploy needed).
+const out = replayOut(new Date());
+---
+<section id="replay" class="replay" hidden={!out} set:html={out ? renderReplay() : ""}></section>

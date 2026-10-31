@@ -1,12 +1,13 @@
 import { SERIES } from "../data/series";
-import { T, phase, formUrl, renderEpisodes, type Phase } from "../lib/series";
+import { T, phase, formUrl, renderEpisodes, replayOut, renderReplay, type Phase } from "../lib/series";
 
 // ?preview=2026-10-28T15:00 (ET) shows the page as it will look at that time.
 // ?placeholders=1 shows where each episode player will sit.
 const qs = new URLSearchParams(location.search), pv = qs.get("preview");
 let offset = 0;
 if (pv) {
-  const t = new Date(pv.length <= 16 ? pv + ":00-04:00" : pv);
+  // Times without an offset are ET: UTC-4 until Nov 1, 2026 at 2 am, UTC-5 after
+  const t = new Date(pv.length <= 16 ? pv + (pv >= "2026-11-01T02:00" ? ":00-05:00" : ":00-04:00") : pv);
   if (!isNaN(t.getTime())) {
     offset = t.getTime() - Date.now();
     const f = document.getElementById("preview-flag")!;
@@ -17,8 +18,23 @@ const now = () => new Date(Date.now() + offset);
 const $ = (id: string) => document.getElementById(id) as HTMLAnchorElement;
 const SHOW_PH = qs.has("placeholders");
 
+let replayShown = false;
 function render() {
   $("ep-list").innerHTML = renderEpisodes(now(), SHOW_PH);
+  renderReplaySection();
+}
+
+/* ---------- Live audit replay (top of page) ---------- */
+function renderReplaySection() {
+  const out = replayOut(now()), el = $("replay");
+  if (out && !replayShown) { el.innerHTML = renderReplay(); el.hidden = false; replayShown = true; }
+  else if (!out) { el.innerHTML = ""; el.hidden = true; replayShown = false; }
+  replayTopbar();
+}
+function replayTopbar() {
+  if (!replayOut(now()) || phase(now()) !== "after") return;
+  $("tb-text").innerHTML = "The <b>live audit replay</b> is here!";
+  $("tb-btn").style.display = ""; $("tb-btn").textContent = "Watch now"; $("tb-btn").href = "#replay"; $("tb-btn").removeAttribute("target");
 }
 
 /* ---------- Phase-dependent copy ---------- */
@@ -66,12 +82,15 @@ function renderPhase(p: Phase) {
     $("cl-h2").innerHTML = "Catch the finale <em>on the podcast</em>";
     $("hero-btn2").style.display = "none";
     $("cl-lead").textContent = "Catch all four episodes on The Growth Show.";
+    replayTopbar();
   }
 }
 
 /* ---------- Countdown ---------- */
 let p = phase(now());
 function tick() {
+  // Reveal the replay the moment it's released, even if the page was already open
+  if (replayOut(now()) !== replayShown) renderReplaySection();
   // Re-render if a cutoff passes while the page is open (e.g. audit requests closing at 2 pm Wed)
   if (phase(now()) !== p) { p = phase(now()); render(); renderPhase(p); }
   // Counts down to the audit deadline first, then to the live taping

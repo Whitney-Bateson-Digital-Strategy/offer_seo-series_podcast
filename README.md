@@ -11,7 +11,7 @@ npm run preview  # serve the built site
 
 ## Where things live
 
-- `src/data/series.ts` — **edit here**: Airtable form links, Zoom link, freebie URL, Acast episode IDs, show-notes links, and all the cutoff/release times (UTC).
+- `src/data/series.ts` — **edit here**: Airtable form links, Zoom link, freebie URL, Acast episode IDs, show-notes links, the live audit replay (YouTube ID + sales page link), and all the cutoff/release times (UTC).
 - `src/pages/index.astro` — the page, assembled from the section components in `src/components/`.
 - `src/styles/global.css` — all styles.
 - `src/lib/series.ts` — phase logic and episode-card rendering (used at build time and in the browser).

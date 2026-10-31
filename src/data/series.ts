@@ -21,6 +21,9 @@ export interface Series {
   zoomUrl: string;
   acastShowId: string;
   acastParams: string;
+  replayYoutubeId: string;
+  replayRelease: string;
+  servicesUrl: string;
   appleShow: string;
   spotifyShow: string;
   episodes: Episode[];
@@ -61,6 +64,12 @@ export const SERIES: Series = {
   // https://embed.acast.com/65d4445a7e29af00164868b8/<EPISODE ID>
   acastShowId: "65d4445a7e29af00164868b8",
   acastParams: "accentColor=161616&bgColor=fc7c54&secondaryColor=161616",
+
+  // Live audit replay (YouTube). Shows as a video at the top of the page, with a
+  // button to the SEO services sales page underneath. Hidden until replayRelease.
+  replayYoutubeId: "8N4BHU0L9fg",                // https://youtu.be/8N4BHU0L9fg
+  replayRelease:   "2026-11-02T10:00:00Z",       // Mon Nov 2, 5 am ET (ET is UTC-5 by then)
+  servicesUrl:     "https://whitneybateson.com/seo-services",
 
   appleShow:   "https://podcasts.apple.com/us/podcast/the-growth-show-with-whitney-bateson/id1734664470",
   spotifyShow: "https://open.spotify.com/show/7EN6VaQaH8Kb1wfEc5Ahvo",

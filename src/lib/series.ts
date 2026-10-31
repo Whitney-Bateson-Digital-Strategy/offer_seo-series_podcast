@@ -9,7 +9,27 @@ export const T = {
   start: d(SERIES.liveStart),
   end: d(SERIES.liveEnd),
   fb: d(SERIES.freebieUnlock),
+  replay: d(SERIES.replayRelease),
 };
+
+/* ---------- Live audit replay (top of page) ---------- */
+export function replayOut(n: Date): boolean {
+  return !!SERIES.replayYoutubeId && n >= T.replay;
+}
+
+export function renderReplay(): string {
+  return '<div class="wrap"><div class="center">' +
+    '<p class="eyebrow">The live audit replay</p>' +
+    '<h2 class="h2">Watch us audit two <em>real practice websites</em></h2>' +
+    '<p class="lead replay-lead">Missed the live Q&amp;A? Catch the full replay, then see how we can help with your own site.</p>' +
+    '</div>' +
+    '<div class="replay-video"><iframe src="https://www.youtube-nocookie.com/embed/' + SERIES.replayYoutubeId + '?rel=0" ' +
+    'title="Live SEO audit and Q&amp;A replay" loading="lazy" ' +
+    'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
+    'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>' +
+    '<div class="replay-cta"><a class="btn btn-p" href="' + SERIES.servicesUrl + '" target="_blank" rel="noopener">Learn more about our SEO services</a></div>' +
+    '</div>';
+}
 
 export function phase(n: Date): Phase {
   if (n < T.cutoff) return "open";

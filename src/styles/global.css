@@ -348,10 +348,10 @@ section{ padding:96px 0; }
 
 /* ---------------- faq ---------------- */
 #faq{ background:var(--pink-wash); }
-/* Two independent columns of three, so opening one answer doesn't stretch
-   the question beside it. Stacks to one column on phones. */
+/* One list laid out as an even two-column grid, so the sides stay balanced
+   even when some questions are hidden. align-items:start keeps an opened
+   answer from stretching the card beside it. Stacks to one column on phones. */
 .faq{ max-width:1000px; margin:2.5rem auto 0; display:grid; grid-template-columns:1fr; gap:.75rem; align-items:start; }
-.faq-col{ display:flex; flex-direction:column; gap:.75rem; }
 @media (min-width:820px){ .faq{ grid-template-columns:1fr 1fr; gap:1.25rem; } }
 .faq details{ background:var(--paper); border-radius:20px; box-shadow:var(--shadow); }
 .faq summary{

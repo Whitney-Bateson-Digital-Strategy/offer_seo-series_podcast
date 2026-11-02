@@ -85,7 +85,7 @@ export const SERIES: Series = {
     { n:3, acast:"6adf623b677cf6f87d73b892", showNotes:"", date:"Wed, Oct 28", release:"2026-10-28T09:00:00Z", // 5 am ET
       title:"Why Good SEO Still Doesn't Fill Your Calendar (and What To Do About It)",
       desc:"Getting traffic but your calendar still isn't full? We're talking about the strategy mistakes we see on audits, how the approach changes for local and virtual practices, and why these problems are so hard to spot on your own site." },
-    { n:4, acast:"", showNotes:"", date:"Thu, Oct 29", release:"2026-11-02T05:00:00Z", live:true,
+    { n:4, acast:"6ae67836b478422f9190aae3", showNotes:"", date:"Thu, Oct 29", release:"2026-11-02T05:00:00Z", live:true,
       title:"We're Auditing Two Practice Websites Live, Taking Your Questions, and Unveiling Our New SEO Services",
       desc:"Ever wondered what an SEO expert actually looks for? Pull up a chair while Matt walks through two real practice websites and shows what he'd fix first and why. Bring your questions and leave with ideas you can try on your own site right away. Airs on the podcast Monday, Nov 2." }
   ]
